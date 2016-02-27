@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+          http://www.springframework.org/schema/aop 
+          http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+          http://www.springframework.org/schema/context 
+          http://www.springframework.org/schema/context/spring-context-4.0.xsd
+          http://www.springframework.org/schema/tx 
+          http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+    
+    <aop:aspectj-autoproxy />
+    <!--MySQL-->
+    <!--    <context:property-placeholder location="classpath:persistence-mysql.properties" />-->
+    <!--SQL SERVER-->
+    <context:property-placeholder location="classpath:persistence-sqlserver.properties" />
+    
+    <context:annotation-config/>	
+    <context:component-scan base-package="com.bap.erp.dao;
+                                          com.bap.erp.servicios;
+                                          com.bap.erp.ws;
+                                          com.bap.erp.managers;
+                                          com.bap.erp.filters;
+                                          com.bap.erp.correo" />
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    
+    <bean id="wsReferences" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="classpath:ws-references.properties"/>
+    </bean>
+
+    <!--***********************PERSISTENCE****************************-->
+    <bean id="myEmf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="packagesToScan" value="com.bap.erp.modelo" />
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+        </property>
+        <property name="jpaProperties">
+            <props>
+                <!--*** HABILITAR / DESHABILITAR PARA RECREAR LA BD **-->
+                <!--<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>-->
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <!--<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>-->
+            </props>
+        </property>
+    </bean>
+    
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.user}" />
+        <property name="password" value="${jdbc.pass}" />
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="myEmf" />
+    </bean>   
+
+    <bean id="persistenceExceptionTranslationPostProcessor" class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+    
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
+    
+    <!-- Aspect -->
+    <bean id="authenticationAspect" class="com.bap.erp.aspects.AuthenticationAspect" />
+    <bean id="userSessionAspect" class="com.bap.erp.aspects.UserSessionAspect" factory-method="aspectOf"/>
+    
+    
+    <!--Envio de correo electronicos-->
+    <!--    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host">
+            <value>#</value>
+        </property>
+        <property name="username">
+            <value>#</value>
+        </property>
+        <property name="password">
+            <value>#</value>
+        </property> 
+        <property name="javaMailProperties">
+            <props> 
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.smtp.socketFactory.port">587</prop>
+            </props>
+        </property> 
+    </bean>    -->
+    
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host">
+            <value>smtp.gmail.com</value>
+        </property>
+        <property name="username">
+            <value>developerbap@gmail.com</value>
+        </property>
+        <property name="password">
+            <value>BrindamosApoyoProfesional</value>
+        </property> 
+        <property name="javaMailProperties">
+            <props> 
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.smtp.socketFactory.port">587</prop>
+            </props>
+        </property> 
+    </bean>
+    
+    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+        <property name="velocityProperties">
+            <value>
+                resource.loader=class
+                class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+            </value>
+        </property>
+    </bean>    
+    
+</beans>

@@ -1,0 +1,102 @@
+USE erp_ws
+GO
+--BANCO
+ALTER TABLE CPC_BANCO ALTER COLUMN fecha_alta datetime null
+ALTER TABLE CPC_BANCO ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPC_BANCO ALTER COLUMN fecha_modificacion datetime null
+--CONTRATO--
+ALTER TABLE CPC_CONTRATO ALTER COLUMN fecha_alta datetime null
+ALTER TABLE CPC_CONTRATO ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPC_CONTRATO ALTER COLUMN fecha_modificacion datetime null
+ALTER TABLE CPC_CONTRATO ALTER COLUMN fecha_contrato datetime null
+ALTER TABLE CPC_CONTRATO ALTER COLUMN fecha_vigencia_fin datetime null
+ALTER TABLE CPC_CONTRATO ALTER COLUMN fecha_vigencia_inicio datetime null
+--CONTRATO ITEM
+ALTER TABLE CPC_CONTRATO_ITEM ALTER COLUMN fecha_alta datetime null
+ALTER TABLE CPC_CONTRATO_ITEM ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPC_CONTRATO_ITEM ALTER COLUMN fecha_modificacion datetime null
+--DETALLE FACTURA
+ALTER TABLE CPC_DETALLE_FACTURA ALTER COLUMN fecha_alta datetime null
+ALTER TABLE CPC_DETALLE_FACTURA ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPC_DETALLE_FACTURA ALTER COLUMN fecha_modificacion datetime null
+--DOSIFICACION
+ALTER TABLE CPC_DOSIFICACION ALTER COLUMN fecha_alta datetime null
+ALTER TABLE CPC_DOSIFICACION ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPC_DOSIFICACION ALTER COLUMN fecha_modificacion datetime null
+ALTER TABLE CPC_DOSIFICACION ALTER COLUMN fecha_activacion datetime null
+ALTER TABLE CPC_DOSIFICACION ALTER COLUMN fecha_limite_emision datetime null
+ALTER TABLE CPC_DOSIFICACION ALTER COLUMN fecha_solicitud datetime null
+--FACTURA EMITIDA
+ALTER TABLE CPC_FACTURA_EMITIDA ALTER COLUMN fecha_alta datetime null
+ALTER TABLE CPC_FACTURA_EMITIDA ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPC_FACTURA_EMITIDA ALTER COLUMN fecha_modificacion datetime null
+ALTER TABLE CPC_FACTURA_EMITIDA ALTER COLUMN fecha_factura datetime null
+--ITEM
+ALTER TABLE CPC_ITEM ALTER COLUMN fecha_alta datetime null
+ALTER TABLE CPC_ITEM ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPC_ITEM ALTER COLUMN fecha_modificacion datetime null
+--PAGO
+ALTER TABLE CPC_PAGO ALTER COLUMN fecha_alta datetime null
+ALTER TABLE CPC_PAGO ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPC_PAGO ALTER COLUMN fecha_modificacion datetime null
+--PAGO CONTRATO
+ALTER TABLE CPC_PAGO_CONTRATO ALTER COLUMN fecha_alta datetime null
+ALTER TABLE CPC_PAGO_CONTRATO ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPC_PAGO_CONTRATO ALTER COLUMN fecha_modificacion datetime null
+ALTER TABLE CPC_PAGO_CONTRATO ALTER COLUMN fecha_programada datetime null
+--SUCURSAL
+ALTER TABLE CPC_SUCURSAL ALTER COLUMN fecha_alta datetime null
+ALTER TABLE CPC_SUCURSAL ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPC_SUCURSAL ALTER COLUMN fecha_modificacion datetime null
+--DOCUMENTO PAGO
+ALTER TABLE DOCUMENTO_PAGO ALTER COLUMN fecha_alta datetime null
+ALTER TABLE DOCUMENTO_PAGO ALTER COLUMN fecha_baja datetime null
+ALTER TABLE DOCUMENTO_PAGO ALTER COLUMN fecha_modificacion datetime null
+ALTER TABLE DOCUMENTO_PAGO ALTER COLUMN fecha_documento_pago datetime null
+--TIPO DE CAMBIO
+ALTER TABLE CPC_TIPO_CAMBIO ALTER COLUMN fecha_alta datetime not null
+ALTER TABLE CPC_TIPO_CAMBIO ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPC_TIPO_CAMBIO ALTER COLUMN fecha_modificacion datetime null
+ALTER TABLE CPC_TIPO_CAMBIO ALTER COLUMN fecha datetime null
+--CONCEPTO
+ALTER TABLE CPP_CONCEPTO ALTER COLUMN fecha_alta datetime not null
+ALTER TABLE CPP_CONCEPTO ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPP_CONCEPTO ALTER COLUMN fecha_modificacion datetime null
+--CONTACTO
+ALTER TABLE CPP_CONTACTO ALTER COLUMN fecha_alta datetime not null
+ALTER TABLE CPP_CONTACTO ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPP_CONTACTO ALTER COLUMN fecha_modificacion datetime null
+ALTER TABLE CPP_CONTACTO ALTER COLUMN fecha_aniversario datetime null
+--EVENTO CONCEPTO
+ALTER TABLE CPP_EVENTO_CONCEPTO ALTER COLUMN fecha_alta datetime not null
+ALTER TABLE CPP_EVENTO_CONCEPTO ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPP_EVENTO_CONCEPTO ALTER COLUMN fecha_modificacion datetime null
+--FACTURA
+ALTER TABLE CPP_FACTURA ALTER COLUMN fecha_alta datetime not null
+ALTER TABLE CPP_FACTURA ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPP_FACTURA ALTER COLUMN fecha_modificacion datetime null
+--FORMA PAGO COBRO
+ALTER TABLE CPP_FORMA_PAGO_COBRO ALTER COLUMN fecha_alta datetime not null
+ALTER TABLE CPP_FORMA_PAGO_COBRO ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPP_FORMA_PAGO_COBRO ALTER COLUMN fecha_modificacion datetime null
+--GRUPO
+ALTER TABLE CPP_GRUPO ALTER COLUMN fecha_alta datetime not null
+ALTER TABLE CPP_GRUPO ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPP_GRUPO ALTER COLUMN fecha_modificacion datetime null
+--PROVEEDOR CLIENTE
+ALTER TABLE CPP_PROVEEDOR_CLIENTE ALTER COLUMN fecha_alta datetime not null
+ALTER TABLE CPP_PROVEEDOR_CLIENTE ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPP_PROVEEDOR_CLIENTE ALTER COLUMN fecha_modificacion datetime null
+ALTER TABLE CPP_PROVEEDOR_CLIENTE ALTER COLUMN fecha_aniversario datetime null
+--PROVEEDOR CLIENTE CONCEPTO
+ALTER TABLE CPP_PROVEEDOR_CLIENTE_CONCEPTO ALTER COLUMN fecha_alta datetime not null
+ALTER TABLE CPP_PROVEEDOR_CLIENTE_CONCEPTO ALTER COLUMN fecha_baja datetime null
+ALTER TABLE CPP_PROVEEDOR_CLIENTE_CONCEPTO ALTER COLUMN fecha_modificacion datetime null
+--PAR VALOR
+ALTER TABLE PAR_VALOR ALTER COLUMN fecha_alta datetime not null
+ALTER TABLE PAR_VALOR ALTER COLUMN fecha_baja datetime null
+ALTER TABLE PAR_VALOR ALTER COLUMN fecha_modificacion datetime null
+--PRIMAS
+ALTER TABLE RH_PRIMAS ALTER COLUMN fecha_alta datetime not null
+ALTER TABLE RH_PRIMAS ALTER COLUMN fecha_baja datetime null
+ALTER TABLE RH_PRIMAS ALTER COLUMN fecha_modificacion datetime null

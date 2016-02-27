@@ -1,0 +1,59 @@
+<html>
+<style type="text/css">
+<!--
+.variables {
+	font-weight: bold;
+}
+.asunto {
+	font-weight: bold;
+	text-decoration: underline;	
+}
+.titulo {
+	font-weight: bold;
+}
+body{
+	color: #2C462E;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.banner {
+border-color:#98B954; border-style:outset; background-image:url(banner.jpg);width:1020px; height:110px;
+}
+.contenido {
+border-color:#98B954; border-style:outset; background-color:#E0E3E0;width:1020px; height:350px;
+}
+-->
+</style>
+
+<body>
+<div class="contenido">
+<br/><br/>
+Señor:
+<span class="variables">${cliAutorizador}</span>
+<br/><br/>
+<div align="right">
+Ref.- 
+<span class="asunto" >${asunto}</span>
+</div>
+<br/><br/>
+El señor  
+<span class="variables" >${cliNormal}</span>
+solicitó 
+<span class="variables" >${nroCajas}</span>
+cajas vacías, en fecha 
+<span class="variables" >${fecha}</span>
+con el siguiente código 
+<span class="variables" >${codigo}</span> 
+<br/><br/>
+Se solicita su autorización.
+<br/><br/>
+<span class="titulo">
+Atentamente,
+<br/><br/>
+WAMSA S.A.
+</span>
+</div>
+   Este correo fue enviado de: <a href="mailto:${emailAddress}">${emailAddress}</a>.
+</div>
+
+</body>
+</html>

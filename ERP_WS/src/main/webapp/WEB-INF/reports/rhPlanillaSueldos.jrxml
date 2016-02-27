@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rhPlanillaSueldos" language="groovy" pageWidth="1008" pageHeight="612" orientation="Landscape" columnWidth="968" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f05d7c81-ad0a-4233-8822-ef55f6f919bd">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<import value="com.bap.erp.commons.utils.NumberUtils"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="afp" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[afp]]></fieldDescription>
+	</field>
+	<field name="aporteNacionalSolidario" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[aporteNacionalSolidario]]></fieldDescription>
+	</field>
+	<field name="bonoAntiguedad" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[bonoAntiguedad]]></fieldDescription>
+	</field>
+	<field name="bonoProduccion" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[bonoProduccion]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="diasDomingo" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[diasDomingo]]></fieldDescription>
+	</field>
+	<field name="diasTrabajados" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[diasTrabajados]]></fieldDescription>
+	</field>
+	<field name="fechaAlta" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaAlta]]></fieldDescription>
+	</field>
+	<field name="fechaBaja" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaBaja]]></fieldDescription>
+	</field>
+	<field name="fechaModificacion" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaModificacion]]></fieldDescription>
+	</field>
+	<field name="horasDomingo" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[horasDomingo]]></fieldDescription>
+	</field>
+	<field name="horasExtras" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[horasExtras]]></fieldDescription>
+	</field>
+	<field name="horasNocturnas" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[horasNocturnas]]></fieldDescription>
+	</field>
+	<field name="idPlanillaSueldos" class="java.lang.Long">
+		<fieldDescription><![CDATA[idPlanillaSueldos]]></fieldDescription>
+	</field>
+	<field name="ingresoDiasDomingo" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[ingresoDiasDomingo]]></fieldDescription>
+	</field>
+	<field name="ingresoDiasTrabajados" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[ingresoDiasTrabajados]]></fieldDescription>
+	</field>
+	<field name="ingresoHorasDomingo" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[ingresoHorasDomingo]]></fieldDescription>
+	</field>
+	<field name="ingresoHorasExtras" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[ingresoHorasExtras]]></fieldDescription>
+	</field>
+	<field name="ingresoHorasNocturnas" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[ingresoHorasNocturnas]]></fieldDescription>
+	</field>
+	<field name="liquidoPagable" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[liquidoPagable]]></fieldDescription>
+	</field>
+	<field name="otrosBonos" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[otrosBonos]]></fieldDescription>
+	</field>
+	<field name="otrosDescuentos" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[otrosDescuentos]]></fieldDescription>
+	</field>
+	<field name="parEstadoLiquidacion" class="com.bap.erp.modelo.par.ParEstadoLiquidacion">
+		<fieldDescription><![CDATA[parEstadoLiquidacion]]></fieldDescription>
+	</field>
+	<field name="porcentajeAntiguedad" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[porcentajeAntiguedad]]></fieldDescription>
+	</field>
+	<field name="rcIva" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[rcIva]]></fieldDescription>
+	</field>
+	<field name="rhEmpleadoCargo" class="com.bap.erp.modelo.rh.RhEmpleadoCargo">
+		<fieldDescription><![CDATA[rhEmpleadoCargo]]></fieldDescription>
+	</field>
+	<field name="rhPeriodoGestion" class="com.bap.erp.modelo.rh.RhPeriodoGestion">
+		<fieldDescription><![CDATA[rhPeriodoGestion]]></fieldDescription>
+	</field>
+	<field name="totalDescuentos" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[totalDescuentos]]></fieldDescription>
+	</field>
+	<field name="totalGanado" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[totalGanado]]></fieldDescription>
+	</field>
+	<field name="usuarioAlta" class="java.lang.String">
+		<fieldDescription><![CDATA[usuarioAlta]]></fieldDescription>
+	</field>
+	<field name="usuarioBaja" class="java.lang.String">
+		<fieldDescription><![CDATA[usuarioBaja]]></fieldDescription>
+	</field>
+	<field name="usuarioModificacion" class="java.lang.String">
+		<fieldDescription><![CDATA[usuarioModificacion]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="74" splitType="Stretch">
+			<staticText>
+				<reportElement x="361" y="0" width="280" height="20" uuid="e6929b25-3df7-4566-9c34-126e89de41a2"/>
+				<textElement textAlignment="Center">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PLANILLA DE SUELDOS Y SALARIOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="22" height="20" uuid="aaebbef3-cbf9-4d06-a806-de77ddf157a9"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Cod.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="0" width="110" height="20" uuid="d2633c1b-54de-4b1e-aa9a-4e8b19068fb6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Apellidos y Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="0" width="34" height="20" uuid="bc5f5214-72af-46c1-adea-cb0024508e75"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Doc. Identif.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="0" width="40" height="20" uuid="3dea9eea-6fd9-47f8-9cd6-b260501125a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sueldo Basico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="51" height="20" uuid="9d061cca-decb-49b5-9627-8188714ac38d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Dias Trabajados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="0" width="37" height="20" uuid="f5a1f529-9d7c-47c4-a192-d5c59299bc8d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[B. Antig.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="0" width="32" height="20" uuid="f61325dd-dae4-4455-81a6-d993601b00b1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Horas Extras]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="23" width="965" height="1" uuid="1e0c5e55-a83c-4858-8aee-0959b98b39b6"/>
+			</line>
+			<staticText>
+				<reportElement x="478" y="0" width="26" height="20" uuid="429176c8-a4b5-46b0-a204-5b5fefd1ccd7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Horas Noct.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="516" y="0" width="40" height="20" uuid="d680a7ce-a93a-4e18-84bb-782322d1c5f1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Horas Domingo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="556" y="0" width="40" height="20" uuid="b3fed4d6-628c-4698-98f9-70d0e9a786fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Otros Ingresos]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="965" height="1" uuid="7147adb2-d1aa-46e1-8c35-67c31c70302a"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="22" height="20" uuid="d8516a8b-5226-463e-bd9a-ba3fdacbb192"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{rhEmpleadoCargo}.rhEmpleado.codigo]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="22" y="0" width="224" height="20" uuid="3bcf03dd-39e0-4936-a94c-50fb199f4ba1"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{rhEmpleadoCargo}.rhEmpleado.nombreCompleto]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="0" width="44" height="20" uuid="0656eba2-4904-4d41-a7d5-bab71785afc2"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{rhEmpleadoCargo}.rhEmpleado.numeroDocumento]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="0" width="40" height="20" uuid="bc6e83bc-7880-4e39-8d2e-05590ef355c7"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{rhEmpleadoCargo}.sueldo!=null ? NumberUtils.decimalFormatBigDecimal($F{rhEmpleadoCargo}.sueldo,2) : "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="17" height="20" uuid="a8fa078d-8d7e-43a3-adf2-b3b90e843b4d"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{diasTrabajados}!=null ? NumberUtils.decimalFormatBigDecimal($F{diasTrabajados}) : "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="51" height="20" uuid="c19b2227-913d-46ae-ba7c-42d3a62add8c"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{ingresoDiasTrabajados}!=null ? NumberUtils.decimalFormatBigDecimal($F{ingresoDiasTrabajados},2) : "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="0" width="37" height="20" uuid="0d519f9f-8eb4-4360-970e-11dbecd135aa"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{bonoAntiguedad}!=null ? NumberUtils.decimalFormatBigDecimal($F{bonoAntiguedad},2) : "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="0" width="32" height="20" uuid="dd8e58e1-058e-4554-b8b2-a512001494ce"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{ingresoHorasExtras}!=null ? NumberUtils.decimalFormatBigDecimal($F{ingresoHorasExtras},2) : "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="468" y="0" width="48" height="20" uuid="00a33899-024d-4e37-97bd-41cd24206f4f"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{ingresoHorasNocturnas}!=null ? NumberUtils.decimalFormatBigDecimal($F{ingresoHorasNocturnas},2) : "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="516" y="0" width="40" height="20" uuid="c57e28fe-11d0-462d-b916-803cfe186165"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{ingresoHorasDomingo}!=null ? NumberUtils.decimalFormatBigDecimal($F{ingresoHorasDomingo},2) : "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="556" y="0" width="40" height="20" uuid="c1310375-0f44-4741-821a-9bf43587bbe3"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{otrosBonos}!=null ? NumberUtils.decimalFormatBigDecimal($F{otrosBonos},2) : "")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

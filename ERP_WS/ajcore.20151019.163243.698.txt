@@ -1,0 +1,730 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.6.7 built on Friday Jan 1, 2010 at 03:49:38 GMT
+---- Dump Properties ---
+Dump file: ajcore.20151019.163243.698.txt
+Dump reason: org.aspectj.apache.bcel.classfile.ClassFormatException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:412)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:373)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:411)
+	at org.aspectj.weaver.World.resolve(World.java:296)
+	at org.aspectj.weaver.World.resolve(World.java:209)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:95)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:806)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:254)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:622)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:75)
+	at org.aspectj.weaver.ResolvedType.collectInterTypeMungers(ResolvedType.java:1388)
+	at org.aspectj.weaver.ResolvedType.getInterTypeMungersIncludingSupers(ResolvedType.java:1369)
+	at org.aspectj.weaver.ResolvedType.checkInterTypeMungers(ResolvedType.java:1440)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:704)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:569)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:405)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:200)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1022)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:355)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:234)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:381)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+---- System Properties ---
+java.runtime.name=Java(TM) SE Runtime Environment
+sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib
+java.vm.version=25.60-b23
+user.country.format=BO
+gopherProxySet=false
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+guice.disable.misplaced.annotation.check=true
+path.separator=:
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.country=US
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=unknown
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS
+java.runtime.version=1.8.0_60-b27
+java.awt.graphicsenv=sun.awt.CGraphicsEnvironment
+java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/endorsed
+os.arch=x86_64
+java.io.tmpdir=/var/folders/wk/ps8gsts56kl2dhhnkll3h4wr0000gn/T/
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+os.name=Mac OS X
+maven.ext.class.path=/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar
+classworlds.conf=/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/maven/bin/m2.conf
+sun.jnu.encoding=UTF-8
+java.library.path=/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/webcommon/bin::/Users/gus/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+os.version=10.9.2
+http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+user.home=/Users/gus
+user.timezone=America/La_Paz
+java.awt.printerjob=sun.lwawt.macosx.CPrinterJob
+file.encoding=UTF-8
+java.specification.version=1.8
+java.class.path=/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/maven/boot/plexus-classworlds-2.4.jar
+user.name=gus
+java.vm.specification.version=1.8
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/maven-nblib/netbeans-eventspy.jar clean install
+java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre
+sun.arch.data.model=64
+user.language=en
+java.specification.vendor=Oracle Corporation
+awt.toolkit=sun.lwawt.macosx.LWCToolkit
+java.vm.info=mixed mode
+java.version=1.8.0_60
+java.ext.dirs=/Users/gus/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes
+java.vendor=Oracle Corporation
+maven.home=/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/java/maven
+file.separator=/
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding=UnicodeBig
+sun.cpu.endian=little
+socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16
+ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+sun.cpu.isalist=
+---- Command Line ---
+-encoding
+UTF-8
+-source
+1.6
+-target
+1.6
+-classpath
+/Users/gus/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/gus/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/gus/.m2/repository/com/auth0/java-jwt/1.0.0/java-jwt-1.0.0.jar:/Users/gus/.m2/repository/com/bap/erp/commons/0.1/commons-0.1.jar:/Users/gus/.m2/repository/com/fasterxml/classmate/1.0.0/classmate-1.0.0.jar:/Users/gus/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.jar:/Users/gus/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.jar:/Users/gus/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.jar:/Users/gus/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.4.0/jackson-datatype-joda-2.4.0.jar:/Users/gus/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.4.0/jackson-datatype-jsr310-2.4.0.jar:/Users/gus/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.0.0/jackson-jaxrs-json-provider-2.0.0.jar:/Users/gus/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.0.0/jackson-module-jaxb-annotations-2.0.0.jar:/Users/gus/.m2/repository/com/fasterxml/jackson/module/jackson-module-jsonSchema/2.1.0/jackson-module-jsonSchema-2.1.0.jar:/Users/gus/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.10/2.1.5/jackson-module-scala_2.10-2.1.5.jar:/Users/gus/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/gus/.m2/repository/com/google/guava/guava/11.0.2/guava-11.0.2.jar:/Users/gus/.m2/repository/com/google/zxing/core/3.0.0/core-3.0.0.jar:/Users/gus/.m2/repository/com/google/zxing/javase/3.0.0/javase-3.0.0.jar:/Users/gus/.m2/repository/com/itextpdf/itext-pdfa/5.5.0/itext-pdfa-5.5.0.jar:/Users/gus/.m2/repository/com/itextpdf/itextpdf/5.5.0/itextpdf-5.5.0.jar:/Users/gus/.m2/repository/com/microsoft/sqlserver/sqljdbc4/3.0/sqljdbc4-3.0.jar:/Users/gus/.m2/repository/com/sun/xml/security/xml-security-impl/1.0/xml-security-impl-1.0.jar:/Users/gus/.m2/repository/com/thoughtworks/paranamer/paranamer/2.5.2/paranamer-2.5.2.jar:/Users/gus/.m2/repository/com/wordnik/swagger-annotations/1.3.5/swagger-annotations-1.3.5.jar:/Users/gus/.m2/repository/com/wordnik/swagger-core_2.10/1.3.5/swagger-core_2.10-1.3.5.jar:/Users/gus/.m2/repository/com/wordnik/swagger-jaxrs_2.10/1.3.5/swagger-jaxrs_2.10-1.3.5.jar:/Users/gus/.m2/repository/com/wordnik/swagger-jersey2-jaxrs_2.10/1.3.5/swagger-jersey2-jaxrs_2.10-1.3.5.jar:/Users/gus/.m2/repository/commons-beanutils/commons-beanutils/1.9.0/commons-beanutils-1.9.0.jar:/Users/gus/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/gus/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/Users/gus/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar:/Users/gus/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/Users/gus/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/Users/gus/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/Users/gus/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/gus/.m2/repository/io/jsonwebtoken/jjwt/0.4/jjwt-0.4.jar:/Users/gus/.m2/repository/jakarta-regexp/jakarta-regexp/1.4/jakarta-regexp-1.4.jar:/Users/gus/.m2/repository/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar:/Users/gus/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/gus/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/Users/gus/.m2/repository/javax/mail/mail/1.4.7/mail-1.4.7.jar:/Users/gus/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/Users/gus/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/Users/gus/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0/javax.ws.rs-api-2.0.jar:/Users/gus/.m2/repository/jfree/jcommon/1.0.15/jcommon-1.0.15.jar:/Users/gus/.m2/repository/jfree/jfreechart/1.0.12/jfreechart-1.0.12.jar:/Users/gus/.m2/repository/joda-time/joda-time/2.2/joda-time-2.2.jar:/Users/gus/.m2/repository/junit/junit/4.3.1/junit-4.3.1.jar:/Users/gus/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/gus/.m2/repository/net/glxn/qrgen/1.4/qrgen-1.4.jar:/Users/gus/.m2/repository/net/sf/jasperreports/jasperreports/6.0.0/jasperreports-6.0.0.jar:/Users/gus/.m2/repository/org/apache/lucene/lucene-analyzers-common/4.5.1/lucene-analyzers-common-4.5.1.jar:/Users/gus/.m2/repository/org/apache/lucene/lucene-core/4.5.1/lucene-core-4.5.1.jar:/Users/gus/.m2/repository/org/apache/lucene/lucene-queries/4.5.1/lucene-queries-4.5.1.jar:/Users/gus/.m2/repository/org/apache/lucene/lucene-queryparser/4.5.1/lucene-queryparser-4.5.1.jar:/Users/gus/.m2/repository/org/apache/lucene/lucene-sandbox/4.5.1/lucene-sandbox-4.5.1.jar:/Users/gus/.m2/repository/org/apache/pdfbox/fontbox/1.8.10/fontbox-1.8.10.jar:/Users/gus/.m2/repository/org/apache/pdfbox/jempbox/1.8.10/jempbox-1.8.10.jar:/Users/gus/.m2/repository/org/apache/pdfbox/pdfbox/1.8.10/pdfbox-1.8.10.jar:/Users/gus/.m2/repository/org/apache/poi/poi/3.11/poi-3.11.jar:/Users/gus/.m2/repository/org/apache/poi/poi-ooxml/3.11/poi-ooxml-3.11.jar:/Users/gus/.m2/repository/org/apache/poi/poi-ooxml-schemas/3.11/poi-ooxml-schemas-3.11.jar:/Users/gus/.m2/repository/org/apache/velocity/velocity/1.6.2/velocity-1.6.2.jar:/Users/gus/.m2/repository/org/apache/xmlbeans/xmlbeans/2.6.0/xmlbeans-2.6.0.jar:/Users/gus/.m2/repository/org/aspectj/aspectjrt/1.8.2/aspectjrt-1.8.2.jar:/Users/gus/.m2/repository/org/aspectj/aspectjweaver/1.8.2/aspectjweaver-1.8.2.jar:/Users/gus/.m2/repository/org/codehaus/castor/castor/1.2/castor-1.2.jar:/Users/gus/.m2/repository/org/codehaus/groovy/groovy-all/2.0.1/groovy-all-2.0.1.jar:/Users/gus/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/Users/gus/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar:/Users/gus/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar:/Users/gus/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar:/Users/gus/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.3.1/ecj-4.3.1.jar:/Users/gus/.m2/repository/org/glassfish/hk2/class-model/2.2.0-b21/class-model-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/config-types/2.2.0-b21/config-types-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/core/2.2.0-b21/core-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/hk2/2.2.0-b21/hk2-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/hk2-api/2.2.0-b21/hk2-api-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/hk2-config/2.2.0-b21/hk2-config-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/hk2-locator/2.2.0-b21/hk2-locator-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/hk2-runlevel/2.2.0-b21/hk2-runlevel-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/hk2-utils/2.2.0-b21/hk2-utils-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar:/Users/gus/.m2/repository/org/glassfish/hk2/spring-bridge/2.2.0-b21/spring-bridge-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/external/asm-all-repackaged/2.2.0-b21/asm-all-repackaged-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/external/bean-validator/2.2.0-b21/bean-validator-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/external/cglib/2.2.0-b21/cglib-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/hk2/external/javax.inject/2.2.0-b21/javax.inject-2.2.0-b21.jar:/Users/gus/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet/2.5/jersey-container-servlet-2.5.jar:/Users/gus/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.5/jersey-container-servlet-core-2.5.jar:/Users/gus/.m2/repository/org/glassfish/jersey/core/jersey-client/2.5/jersey-client-2.5.jar:/Users/gus/.m2/repository/org/glassfish/jersey/core/jersey-common/2.5/jersey-common-2.5.jar:/Users/gus/.m2/repository/org/glassfish/jersey/core/jersey-server/2.5/jersey-server-2.5.jar:/Users/gus/.m2/repository/org/glassfish/jersey/ext/jersey-entity-filtering/2.5/jersey-entity-filtering-2.5.jar:/Users/gus/.m2/repository/org/glassfish/jersey/ext/jersey-spring3/2.5/jersey-spring3-2.5.jar:/Users/gus/.m2/repository/org/glassfish/jersey/media/jersey-media-json-jackson/2.5/jersey-media-json-jackson-2.5.jar:/Users/gus/.m2/repository/org/glassfish/jersey/media/jersey-media-multipart/2.5/jersey-media-multipart-2.5.jar:/Users/gus/.m2/repository/org/hibernate/hibernate-core/4.3.5.Final/hibernate-core-4.3.5.Final.jar:/Users/gus/.m2/repository/org/hibernate/hibernate-entitymanager/4.3.5.Final/hibernate-entitymanager-4.3.5.Final.jar:/Users/gus/.m2/repository/org/hibernate/hibernate-validator/5.1.1.Final/hibernate-validator-5.1.1.Final.jar:/Users/gus/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar:/Users/gus/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/Users/gus/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar:/Users/gus/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar:/Users/gus/.m2/repository/org/jboss/logging/jboss-logging/3.1.3.GA/jboss-logging-3.1.3.GA.jar:/Users/gus/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar:/Users/gus/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/Users/gus/.m2/repository/org/jdom/jdom2/2.0.6/jdom2-2.0.6.jar:/Users/gus/.m2/repository/org/joda/joda-convert/1.2/joda-convert-1.2.jar:/Users/gus/.m2/repository/org/json4s/json4s-ast_2.10/3.2.5/json4s-ast_2.10-3.2.5.jar:/Users/gus/.m2/repository/org/json4s/json4s-core_2.10/3.2.5/json4s-core_2.10-3.2.5.jar:/Users/gus/.m2/repository/org/json4s/json4s-ext_2.10/3.2.5/json4s-ext_2.10-3.2.5.jar:/Users/gus/.m2/repository/org/json4s/json4s-jackson_2.10/3.2.5/json4s-jackson_2.10-3.2.5.jar:/Users/gus/.m2/repository/org/json4s/json4s-native_2.10/3.2.5/json4s-native_2.10-3.2.5.jar:/Users/gus/.m2/repository/org/jvnet/tiger-types/1.4/tiger-types-1.4.jar:/Users/gus/.m2/repository/org/jvnet/mimepull/mimepull/1.9.3/mimepull-1.9.3.jar:/Users/gus/.m2/repository/org/olap4j/olap4j/0.9.7.309-JS-3/olap4j-0.9.7.309-JS-3.jar:/Users/gus/.m2/repository/org/osbosoftware/factura/1.0/factura-1.0.jar:/Users/gus/.m2/repository/org/reflections/reflections/0.9.9-RC1/reflections-0.9.9-RC1.jar:/Users/gus/.m2/repository/org/scala-lang/scala-compiler/2.10.0/scala-compiler-2.10.0.jar:/Users/gus/.m2/repository/org/scala-lang/scala-library/2.10.1/scala-library-2.10.1.jar:/Users/gus/.m2/repository/org/scala-lang/scala-reflect/2.10.0/scala-reflect-2.10.0.jar:/Users/gus/.m2/repository/org/scala-lang/scalap/2.10.0/scalap-2.10.0.jar:/Users/gus/.m2/repository/org/scannotation/scannotation/1.0.3/scannotation-1.0.3.jar:/Users/gus/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar:/Users/gus/.m2/repository/org/slf4j/slf4j-log4j12/1.7.12/slf4j-log4j12-1.7.12.jar:/Users/gus/.m2/repository/org/springframework/spring-aop/4.0.5.RELEASE/spring-aop-4.0.5.RELEASE.jar:/Users/gus/.m2/repository/org/springframework/spring-beans/4.0.5.RELEASE/spring-beans-4.0.5.RELEASE.jar:/Users/gus/.m2/repository/org/springframework/spring-context/4.0.5.RELEASE/spring-context-4.0.5.RELEASE.jar:/Users/gus/.m2/repository/org/springframework/spring-context-support/4.0.5.RELEASE/spring-context-support-4.0.5.RELEASE.jar:/Users/gus/.m2/repository/org/springframework/spring-core/4.0.5.RELEASE/spring-core-4.0.5.RELEASE.jar:/Users/gus/.m2/repository/org/springframework/spring-expression/4.0.5.RELEASE/spring-expression-4.0.5.RELEASE.jar:/Users/gus/.m2/repository/org/springframework/spring-jdbc/4.0.5.RELEASE/spring-jdbc-4.0.5.RELEASE.jar:/Users/gus/.m2/repository/org/springframework/spring-orm/4.0.5.RELEASE/spring-orm-4.0.5.RELEASE.jar:/Users/gus/.m2/repository/org/springframework/spring-tx/4.0.5.RELEASE/spring-tx-4.0.5.RELEASE.jar:/Users/gus/.m2/repository/org/springframework/spring-web/4.0.5.RELEASE/spring-web-4.0.5.RELEASE.jar:/Users/gus/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/Users/gus/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/Users/gus/.m2/repository/xml-apis/xml-apis/1.3.02/xml-apis-1.3.02.jar:/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/target/classes
+-d
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/target/classes
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/dao/GenericJpaDao.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppFactura.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcContratoItemServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/clients/ErpContabilidadClient.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcActividadEconomica.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcActividadEconomicaService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppProveedorClienteConcepto.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppFormaPagoCobroWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppProveedorClienteBusquedaPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/par/ParValorServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcLibroDeVentasHuaweiPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoHito.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoAplicante.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CntCuentaPlanCuentasPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppRetencionWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoAlicuota.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumActividadEconomica.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumDepartamento.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ban/CuentaBancaria.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParActividadEconomica.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcPagoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/server/client/GeneraXML.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/par/ParValorService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/exceptions/ReportCreationException.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CodigoControlExcelPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ErpDetalleFacturaServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcBancoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumEstadoProceso.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ErpDetalleFacturaWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcSucursalServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcLibroDeVentasPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumEstadoPago.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppProveedorClienteWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ban/DocumentoPagoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoContratoEmpleado.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/correo/EmailManagerService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumModalidadTransaccion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/server/client/PruebaXML.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppConceptoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhVariacionServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppLibroDeComprasPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcItemWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoPago.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/correo/EmailManagerServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumPeriodo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ErpAplicante.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppProveedorCliente.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhPeriodoGestionWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhDescuentoEmpleadoCargoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParCliente.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoDocumentoPago.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppProveedorClienteConceptoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhPeriodoGestion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcSucursalService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoAFP.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhParametros.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhEmpleadoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcBancoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoModulo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumCaracteristicaEspecial.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ban/CuentaBancariaService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParEstadoCivil.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhDescuento.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ban/DocumentoPago.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcBanco.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoDocumento.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumModalidadFacturacion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcContratoItem.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhEmpleadoCargo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ImportWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpFacturasDatosPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhEmpleadoCargoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoMoneda.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppConceptoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ErpNotaCreditoDebito.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CntComprobanteWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumMes.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppFacturaServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcContratoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppContactoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhDescuentoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppFormaPagoCobroServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhDescuentoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/data/SendEmailTest.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoEntidad.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcTipoCambioServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ErpFacturaService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoMoneda.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcItemService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ban/CuentaBancariaServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppRetencionServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/rh/RhEmpleadoDescuentoPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoTransaccion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoDocumentoMercantil.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppFormaPagoCobroService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cnt/CntComprobanteService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppRetencion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpDetFacturaNotaCredito.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CntTipoCambioPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcPagoContrato.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParEstadoPago.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/aspects/UserSessionAspect.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParBanco.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParFormaDePago.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcActividadEconomicaWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhSeccionServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcContrato.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcActividadEconomicaServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhVariacionWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhParametrosServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhVariacionService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcConciliacionContablePojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppGrupo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhCargoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhImportWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcItem.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppContactoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumBanco.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhBonoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhCargoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhBonoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/Entidad.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcContratoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcPagoContratoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParLocalizacion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoCompra.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcContratoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcContratoActividadEconomica.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcTipoCambioWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoProveedorCliente.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/clients/CPanelClient.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumEstadoFactura.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/EntidadArbolPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhBonoEmpleadoCargo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcPagoContratoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcLibroDeBancarizacionPorVentasPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ban/DocumentoPagoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ErpAplicanteService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoHito.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppContacto.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParPeriodo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppProveedorClienteConceptoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParEstado.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhSeccionService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhEmpleadoCargoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppProveedorClienteConceptoPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoEmpleado.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/correo/EmailManagerServiceCliente.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpFacturaRetencionPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppEventoConceptoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcItemServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumColorView.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoContacto.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoTransaccion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcContratoPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppFacturaCntComprobantePojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/DocumentoPagoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ERP.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoDocumento.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhBono.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumEstado.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoBonoAntiguedad.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppEventoConceptoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhEmpleadoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhDescuentoEmpleadoCargoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcLibroDeComprasPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParRecurrencia.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/filters/TokenFilter.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhDescuentoEmpleadoCargo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ErpDepartamento.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhParametrosService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoDescuento.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParModalidadFacturacion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoProveedorCliente.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcTipoCambio.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoRegistro.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/rh/RhGeneraGridPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcSucursalWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhLiquidacion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParSeccion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcTipoCambioService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ErpAplicanteWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParEstadoFactura.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppGrupoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcPagoPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppContactoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppFacturaService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ErpDetalleFactura.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ProveedorGrupoConcepto.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpProveedorClientePojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/EnvioCorreoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcContratoActividadEconomicaService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhParametrosWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParValor.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcContratoActividadEconomicaServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcPagoContratoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ErpFacturaWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoItem.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CntCalculosTributariosWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumRecurrencia.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoGrupo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcSucursal.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhEmpleadoCargoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpNotaCreditoDebitoCpcDetalleFacturaPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/EntidadPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ErpFacturaServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppNotaCreditoDebitoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/data/ErpData.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppFormaPagoCobroCuentasBancariasPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CuentaBancariaPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppProveedorClienteServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcDosificacion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppConceptoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcPagoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcPagoContratoPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpAplicantePojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhVariacion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcFacturaEmitidaPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumPropietarioCuenta.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ErpDetalleFacturaService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumModulo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcDosificacionServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppProveedorClienteConceptoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhPeriodoGestionService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumMunicipio.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/managers/JasperReportsBrowserDemoServlet.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoAplicacionRetencion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ErpNotaCreditoDebitoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ErpDepartamentoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoRetencion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/rh/RhEmpleadoDescuentoPojo1.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhSeccionWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoDocumentoPago.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcDosificacionService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppProveedorClienteService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhBonoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParMes.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/rh/RhDescuentoPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhRcIva.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/managers/GeneradorQR.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhCargoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParMunicipio.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CodigoControlPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcPagoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ConcatenaActividadEconomicaPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppGrupoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhCargo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcBancoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/server/client/RepositoryClient.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcContratoItemWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcPago.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ErpAplicanteServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/DocumentoPagoFacturasPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppGrupoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/data/User.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cnt/CntComprobanteServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppFacturaWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ReportesPDF.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CuentaBancariaWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhEmpleado.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ErpDepartamentoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcContratoItemService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParCaracteristicaEspecial.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParCondicionPension.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcDosificacionWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumLocalizacion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhDescuentoEmpleadoCargoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppNotaCreditoDebitoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppConcepto.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppFormaPagoCobro.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppEventoConceptoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoPago.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParDepartamento.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppProveedorClientePojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParGenero.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ErpDepartamentoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoVariacion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/managers/ReportManager.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ParValorWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoRegistro.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcDetalleFacturaSerializer.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/aspects/AuthenticationAspect.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhDescuentoService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoRetencion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumFormaDePago.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcFacturaEmitidaCpcDetalleFacturaPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CntTipoCambioWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoContacto.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhEmpleadoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpFacturasBancariasPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppEventoConcepto.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParEstadoProceso.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhPeriodoGestionServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppRetencionService.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ErpNotaCreditoDebitoServiceImpl.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ErpNotaCreditoDebitoWS.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoDocumentoMercantil.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParModalidadTransaccion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppConceptoProveedoresPojo.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhSeccion.java
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ErpFactura.java
+---- Full Classpath ---
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/resources.jar(3501583 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/rt.jar(66555254 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar(missing)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jsse.jar(625764 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jce.jar(114730 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/charsets.jar(3133473 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/jfr.jar(555268 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes(missing)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/cldrdata.jar(3860522 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/dnsns.jar(8286 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/jaccess.jar(44516 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/jfxrt.jar(18570861 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/localedata.jar(1178935 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/nashorn.jar(2014239 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/sunec.jar(39771 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar(278680 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar(250826 bytes)
+/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/ext/zipfs.jar(68848 bytes)
+/System/Library/Java/Extensions/AppleScriptEngine.jar(6476 bytes)
+/System/Library/Java/Extensions/dns_sd.jar(17780 bytes)
+/System/Library/Java/Extensions/j3daudio.jar(1223495 bytes)
+/System/Library/Java/Extensions/j3dcore.jar(1157355 bytes)
+/System/Library/Java/Extensions/j3dutils.jar(685307 bytes)
+/System/Library/Java/Extensions/jai_codec.jar(275500 bytes)
+/System/Library/Java/Extensions/jai_core.jar(1544543 bytes)
+/System/Library/Java/Extensions/mlibwrapper_jai.jar(41239 bytes)
+/System/Library/Java/Extensions/MRJToolkit.jar(12847 bytes)
+/System/Library/Java/Extensions/QTJava.zip(938719 bytes)
+/System/Library/Java/Extensions/vecmath.jar(127639 bytes)
+/Users/gus/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar(445288 bytes)
+/Users/gus/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar(4467 bytes)
+/Users/gus/.m2/repository/com/auth0/java-jwt/1.0.0/java-jwt-1.0.0.jar(1225121 bytes)
+/Users/gus/.m2/repository/com/bap/erp/commons/0.1/commons-0.1.jar(27999 bytes)
+/Users/gus/.m2/repository/com/fasterxml/classmate/1.0.0/classmate-1.0.0.jar(60282 bytes)
+/Users/gus/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.jar(33491 bytes)
+/Users/gus/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.jar(191738 bytes)
+/Users/gus/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.jar(866104 bytes)
+/Users/gus/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.4.0/jackson-datatype-joda-2.4.0.jar(52237 bytes)
+/Users/gus/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.4.0/jackson-datatype-jsr310-2.4.0.jar(41875 bytes)
+/Users/gus/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.0.0/jackson-jaxrs-json-provider-2.0.0.jar(26504 bytes)
+/Users/gus/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.0.0/jackson-module-jaxb-annotations-2.0.0.jar(32213 bytes)
+/Users/gus/.m2/repository/com/fasterxml/jackson/module/jackson-module-jsonSchema/2.1.0/jackson-module-jsonSchema-2.1.0.jar(50034 bytes)
+/Users/gus/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.10/2.1.5/jackson-module-scala_2.10-2.1.5.jar(1067516 bytes)
+/Users/gus/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar(33015 bytes)
+/Users/gus/.m2/repository/com/google/guava/guava/11.0.2/guava-11.0.2.jar(1648200 bytes)
+/Users/gus/.m2/repository/com/google/zxing/core/3.0.0/core-3.0.0.jar(538199 bytes)
+/Users/gus/.m2/repository/com/google/zxing/javase/3.0.0/javase-3.0.0.jar(38898 bytes)
+/Users/gus/.m2/repository/com/itextpdf/itext-pdfa/5.5.0/itext-pdfa-5.5.0.jar(54332 bytes)
+/Users/gus/.m2/repository/com/itextpdf/itextpdf/5.5.0/itextpdf-5.5.0.jar(2114682 bytes)
+/Users/gus/.m2/repository/com/microsoft/sqlserver/sqljdbc4/3.0/sqljdbc4-3.0.jar(537303 bytes)
+/Users/gus/.m2/repository/com/sun/xml/security/xml-security-impl/1.0/xml-security-impl-1.0.jar(424782 bytes)
+/Users/gus/.m2/repository/com/thoughtworks/paranamer/paranamer/2.5.2/paranamer-2.5.2.jar(30190 bytes)
+/Users/gus/.m2/repository/com/wordnik/swagger-annotations/1.3.5/swagger-annotations-1.3.5.jar(8032 bytes)
+/Users/gus/.m2/repository/com/wordnik/swagger-core_2.10/1.3.5/swagger-core_2.10-1.3.5.jar(672505 bytes)
+/Users/gus/.m2/repository/com/wordnik/swagger-jaxrs_2.10/1.3.5/swagger-jaxrs_2.10-1.3.5.jar(147155 bytes)
+/Users/gus/.m2/repository/com/wordnik/swagger-jersey2-jaxrs_2.10/1.3.5/swagger-jersey2-jaxrs_2.10-1.3.5.jar(62678 bytes)
+/Users/gus/.m2/repository/commons-beanutils/commons-beanutils/1.9.0/commons-beanutils-1.9.0.jar(230951 bytes)
+/Users/gus/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar(263965 bytes)
+/Users/gus/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar(575389 bytes)
+/Users/gus/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar(196768 bytes)
+/Users/gus/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar(185140 bytes)
+/Users/gus/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar(261809 bytes)
+/Users/gus/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar(62050 bytes)
+/Users/gus/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar(313898 bytes)
+/Users/gus/.m2/repository/io/jsonwebtoken/jjwt/0.4/jjwt-0.4.jar(81937 bytes)
+/Users/gus/.m2/repository/jakarta-regexp/jakarta-regexp/1.4/jakarta-regexp-1.4.jar(28576 bytes)
+/Users/gus/.m2/repository/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar(644148 bytes)
+/Users/gus/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar(62983 bytes)
+/Users/gus/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar(26366 bytes)
+/Users/gus/.m2/repository/javax/mail/mail/1.4.7/mail-1.4.7.jar(521157 bytes)
+/Users/gus/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar(105112 bytes)
+/Users/gus/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar(63777 bytes)
+/Users/gus/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0/javax.ws.rs-api-2.0.jar(112758 bytes)
+/Users/gus/.m2/repository/jfree/jcommon/1.0.15/jcommon-1.0.15.jar(309294 bytes)
+/Users/gus/.m2/repository/jfree/jfreechart/1.0.12/jfreechart-1.0.12.jar(1368681 bytes)
+/Users/gus/.m2/repository/joda-time/joda-time/2.2/joda-time-2.2.jar(573912 bytes)
+/Users/gus/.m2/repository/junit/junit/4.3.1/junit-4.3.1.jar(106547 bytes)
+/Users/gus/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar(489884 bytes)
+/Users/gus/.m2/repository/net/glxn/qrgen/1.4/qrgen-1.4.jar(7194 bytes)
+/Users/gus/.m2/repository/net/sf/jasperreports/jasperreports/6.0.0/jasperreports-6.0.0.jar(5114391 bytes)
+/Users/gus/.m2/repository/org/apache/lucene/lucene-analyzers-common/4.5.1/lucene-analyzers-common-4.5.1.jar(1586103 bytes)
+/Users/gus/.m2/repository/org/apache/lucene/lucene-core/4.5.1/lucene-core-4.5.1.jar(2297477 bytes)
+/Users/gus/.m2/repository/org/apache/lucene/lucene-queries/4.5.1/lucene-queries-4.5.1.jar(205195 bytes)
+/Users/gus/.m2/repository/org/apache/lucene/lucene-queryparser/4.5.1/lucene-queryparser-4.5.1.jar(384884 bytes)
+/Users/gus/.m2/repository/org/apache/lucene/lucene-sandbox/4.5.1/lucene-sandbox-4.5.1.jar(45578 bytes)
+/Users/gus/.m2/repository/org/apache/pdfbox/fontbox/1.8.10/fontbox-1.8.10.jar(219006 bytes)
+/Users/gus/.m2/repository/org/apache/pdfbox/jempbox/1.8.10/jempbox-1.8.10.jar(51065 bytes)
+/Users/gus/.m2/repository/org/apache/pdfbox/pdfbox/1.8.10/pdfbox-1.8.10.jar(4085577 bytes)
+/Users/gus/.m2/repository/org/apache/poi/poi/3.11/poi-3.11.jar(2080419 bytes)
+/Users/gus/.m2/repository/org/apache/poi/poi-ooxml/3.11/poi-ooxml-3.11.jar(1210980 bytes)
+/Users/gus/.m2/repository/org/apache/poi/poi-ooxml-schemas/3.11/poi-ooxml-schemas-3.11.jar(5595829 bytes)
+/Users/gus/.m2/repository/org/apache/velocity/velocity/1.6.2/velocity-1.6.2.jar(420975 bytes)
+/Users/gus/.m2/repository/org/apache/xmlbeans/xmlbeans/2.6.0/xmlbeans-2.6.0.jar(2730866 bytes)
+/Users/gus/.m2/repository/org/aspectj/aspectjrt/1.8.2/aspectjrt-1.8.2.jar(117099 bytes)
+/Users/gus/.m2/repository/org/aspectj/aspectjweaver/1.8.2/aspectjweaver-1.8.2.jar(1859293 bytes)
+/Users/gus/.m2/repository/org/codehaus/castor/castor/1.2/castor-1.2.jar(864598 bytes)
+/Users/gus/.m2/repository/org/codehaus/groovy/groovy-all/2.0.1/groovy-all-2.0.1.jar(6191960 bytes)
+/Users/gus/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar(232248 bytes)
+/Users/gus/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar(18336 bytes)
+/Users/gus/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar(780664 bytes)
+/Users/gus/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar(27084 bytes)
+/Users/gus/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.3.1/ecj-4.3.1.jar(1830791 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/class-model/2.2.0-b21/class-model-2.2.0-b21.jar(88033 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/config-types/2.2.0-b21/config-types-2.2.0-b21.jar(6833 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/core/2.2.0-b21/core-2.2.0-b21.jar(117537 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/hk2/2.2.0-b21/hk2-2.2.0-b21.jar(3319 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/hk2-api/2.2.0-b21/hk2-api-2.2.0-b21.jar(130236 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/hk2-config/2.2.0-b21/hk2-config-2.2.0-b21.jar(204120 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/hk2-locator/2.2.0-b21/hk2-locator-2.2.0-b21.jar(147772 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/hk2-runlevel/2.2.0-b21/hk2-runlevel-2.2.0-b21.jar(50262 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/hk2-utils/2.2.0-b21/hk2-utils-2.2.0-b21.jar(66742 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar(20235 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/spring-bridge/2.2.0-b21/spring-bridge-2.2.0-b21.jar(13620 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/external/asm-all-repackaged/2.2.0-b21/asm-all-repackaged-2.2.0-b21.jar(320122 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/external/bean-validator/2.2.0-b21/bean-validator-2.2.0-b21.jar(752887 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/external/cglib/2.2.0-b21/cglib-2.2.0-b21.jar(282811 bytes)
+/Users/gus/.m2/repository/org/glassfish/hk2/external/javax.inject/2.2.0-b21/javax.inject-2.2.0-b21.jar(5982 bytes)
+/Users/gus/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet/2.5/jersey-container-servlet-2.5.jar(15681 bytes)
+/Users/gus/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.5/jersey-container-servlet-core-2.5.jar(53801 bytes)
+/Users/gus/.m2/repository/org/glassfish/jersey/core/jersey-client/2.5/jersey-client-2.5.jar(159736 bytes)
+/Users/gus/.m2/repository/org/glassfish/jersey/core/jersey-common/2.5/jersey-common-2.5.jar(700382 bytes)
+/Users/gus/.m2/repository/org/glassfish/jersey/core/jersey-server/2.5/jersey-server-2.5.jar(824376 bytes)
+/Users/gus/.m2/repository/org/glassfish/jersey/ext/jersey-entity-filtering/2.5/jersey-entity-filtering-2.5.jar(63473 bytes)
+/Users/gus/.m2/repository/org/glassfish/jersey/ext/jersey-spring3/2.5/jersey-spring3-2.5.jar(21040 bytes)
+/Users/gus/.m2/repository/org/glassfish/jersey/media/jersey-media-json-jackson/2.5/jersey-media-json-jackson-2.5.jar(4927 bytes)
+/Users/gus/.m2/repository/org/glassfish/jersey/media/jersey-media-multipart/2.5/jersey-media-multipart-2.5.jar(63856 bytes)
+/Users/gus/.m2/repository/org/hibernate/hibernate-core/4.3.5.Final/hibernate-core-4.3.5.Final.jar(5230007 bytes)
+/Users/gus/.m2/repository/org/hibernate/hibernate-entitymanager/4.3.5.Final/hibernate-entitymanager-4.3.5.Final.jar(645914 bytes)
+/Users/gus/.m2/repository/org/hibernate/hibernate-validator/5.1.1.Final/hibernate-validator-5.1.1.Final.jar(623269 bytes)
+/Users/gus/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar(75311 bytes)
+/Users/gus/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar(113371 bytes)
+/Users/gus/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar(714194 bytes)
+/Users/gus/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar(76551 bytes)
+/Users/gus/.m2/repository/org/jboss/logging/jboss-logging/3.1.3.GA/jboss-logging-3.1.3.GA.jar(57183 bytes)
+/Users/gus/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar(11558 bytes)
+/Users/gus/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar(27717 bytes)
+/Users/gus/.m2/repository/org/jdom/jdom2/2.0.6/jdom2-2.0.6.jar(304924 bytes)
+/Users/gus/.m2/repository/org/joda/joda-convert/1.2/joda-convert-1.2.jar(38460 bytes)
+/Users/gus/.m2/repository/org/json4s/json4s-ast_2.10/3.2.5/json4s-ast_2.10-3.2.5.jar(86179 bytes)
+/Users/gus/.m2/repository/org/json4s/json4s-core_2.10/3.2.5/json4s-core_2.10-3.2.5.jar(579417 bytes)
+/Users/gus/.m2/repository/org/json4s/json4s-ext_2.10/3.2.5/json4s-ext_2.10-3.2.5.jar(74561 bytes)
+/Users/gus/.m2/repository/org/json4s/json4s-jackson_2.10/3.2.5/json4s-jackson_2.10-3.2.5.jar(39953 bytes)
+/Users/gus/.m2/repository/org/json4s/json4s-native_2.10/3.2.5/json4s-native_2.10-3.2.5.jar(68735 bytes)
+/Users/gus/.m2/repository/org/jvnet/tiger-types/1.4/tiger-types-1.4.jar(17506 bytes)
+/Users/gus/.m2/repository/org/jvnet/mimepull/mimepull/1.9.3/mimepull-1.9.3.jar(62135 bytes)
+/Users/gus/.m2/repository/org/olap4j/olap4j/0.9.7.309-JS-3/olap4j-0.9.7.309-JS-3.jar(445343 bytes)
+/Users/gus/.m2/repository/org/osbosoftware/factura/1.0/factura-1.0.jar(16992 bytes)
+/Users/gus/.m2/repository/org/reflections/reflections/0.9.9-RC1/reflections-0.9.9-RC1.jar(121013 bytes)
+/Users/gus/.m2/repository/org/scala-lang/scala-compiler/2.10.0/scala-compiler-2.10.0.jar(14149435 bytes)
+/Users/gus/.m2/repository/org/scala-lang/scala-library/2.10.1/scala-library-2.10.1.jar(7137903 bytes)
+/Users/gus/.m2/repository/org/scala-lang/scala-reflect/2.10.0/scala-reflect-2.10.0.jar(3149351 bytes)
+/Users/gus/.m2/repository/org/scala-lang/scalap/2.10.0/scalap-2.10.0.jar(855012 bytes)
+/Users/gus/.m2/repository/org/scannotation/scannotation/1.0.3/scannotation-1.0.3.jar(18767 bytes)
+/Users/gus/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar(32127 bytes)
+/Users/gus/.m2/repository/org/slf4j/slf4j-log4j12/1.7.12/slf4j-log4j12-1.7.12.jar(8860 bytes)
+/Users/gus/.m2/repository/org/springframework/spring-aop/4.0.5.RELEASE/spring-aop-4.0.5.RELEASE.jar(352744 bytes)
+/Users/gus/.m2/repository/org/springframework/spring-beans/4.0.5.RELEASE/spring-beans-4.0.5.RELEASE.jar(670023 bytes)
+/Users/gus/.m2/repository/org/springframework/spring-context/4.0.5.RELEASE/spring-context-4.0.5.RELEASE.jar(977232 bytes)
+/Users/gus/.m2/repository/org/springframework/spring-context-support/4.0.5.RELEASE/spring-context-support-4.0.5.RELEASE.jar(135413 bytes)
+/Users/gus/.m2/repository/org/springframework/spring-core/4.0.5.RELEASE/spring-core-4.0.5.RELEASE.jar(976350 bytes)
+/Users/gus/.m2/repository/org/springframework/spring-expression/4.0.5.RELEASE/spring-expression-4.0.5.RELEASE.jar(205142 bytes)
+/Users/gus/.m2/repository/org/springframework/spring-jdbc/4.0.5.RELEASE/spring-jdbc-4.0.5.RELEASE.jar(424610 bytes)
+/Users/gus/.m2/repository/org/springframework/spring-orm/4.0.5.RELEASE/spring-orm-4.0.5.RELEASE.jar(366905 bytes)
+/Users/gus/.m2/repository/org/springframework/spring-tx/4.0.5.RELEASE/spring-tx-4.0.5.RELEASE.jar(248205 bytes)
+/Users/gus/.m2/repository/org/springframework/spring-web/4.0.5.RELEASE/spring-web-4.0.5.RELEASE.jar(672765 bytes)
+/Users/gus/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar(65261 bytes)
+/Users/gus/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar(26514 bytes)
+/Users/gus/.m2/repository/xml-apis/xml-apis/1.3.02/xml-apis-1.3.02.jar(194205 bytes)
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/target/classes(26 entries)
+---- Compiler Messages ---
+warning bad version number found in /Users/gus/.m2/repository/org/aspectj/aspectjrt/1.8.2/aspectjrt-1.8.2.jar expected 1.6.7 found 1.8.2
+info directory classpath entry does not exist: /Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/lib/sunrsasign.jar
+info zipfile classpath entry does not exist: /Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/jre/classes
+info Pipelining compilation
+error at (no source information available)
+/Users/gus/Documents/GUS/BAP/ERP-1.1/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ErpFactura.java:0::0 Internal compiler error
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:412)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:373)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:411)
+	at org.aspectj.weaver.World.resolve(World.java:296)
+	at org.aspectj.weaver.World.resolve(World.java:209)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:95)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:806)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:254)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:622)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:75)
+	at org.aspectj.weaver.ResolvedType.collectInterTypeMungers(ResolvedType.java:1388)
+	at org.aspectj.weaver.ResolvedType.getInterTypeMungersIncludingSupers(ResolvedType.java:1369)
+	at org.aspectj.weaver.ResolvedType.checkInterTypeMungers(ResolvedType.java:1440)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:704)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:569)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:405)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:200)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1022)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:355)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:234)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:381)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+abort ABORT -- (ClassFormatException) File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:412)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:373)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:411)
+	at org.aspectj.weaver.World.resolve(World.java:296)
+	at org.aspectj.weaver.World.resolve(World.java:209)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:95)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:806)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:254)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:622)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:75)
+	at org.aspectj.weaver.ResolvedType.collectInterTypeMungers(ResolvedType.java:1388)
+	at org.aspectj.weaver.ResolvedType.getInterTypeMungersIncludingSupers(ResolvedType.java:1369)
+	at org.aspectj.weaver.ResolvedType.checkInterTypeMungers(ResolvedType.java:1440)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:704)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:569)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:405)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:200)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1022)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:355)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:234)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:381)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+---- org.aspectj.weaver.bcel.BcelWorld@173b24c4 ----
+Shadow mungers:
+Empty
+Type mungers:
+Empty
+Late Type mungers:
+Empty

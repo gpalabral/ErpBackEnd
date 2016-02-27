@@ -1,0 +1,715 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.6.7 built on Friday Jan 1, 2010 at 03:49:38 GMT
+---- Dump Properties ---
+Dump file: ajcore.20151019.113117.998.txt
+Dump reason: org.aspectj.apache.bcel.classfile.ClassFormatException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:412)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:373)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:411)
+	at org.aspectj.weaver.World.resolve(World.java:296)
+	at org.aspectj.weaver.World.resolve(World.java:209)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:95)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:806)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:254)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:622)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:75)
+	at org.aspectj.weaver.ResolvedType.collectInterTypeMungers(ResolvedType.java:1388)
+	at org.aspectj.weaver.ResolvedType.getInterTypeMungersIncludingSupers(ResolvedType.java:1369)
+	at org.aspectj.weaver.ResolvedType.checkInterTypeMungers(ResolvedType.java:1440)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:704)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:569)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:405)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:200)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1022)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:355)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:234)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:381)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+---- System Properties ---
+java.runtime.name=Java(TM) SE Runtime Environment
+sun.boot.library.path=/usr/lib/jvm/java-8-oracle/jre/lib/amd64
+java.vm.version=25.60-b23
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+guice.disable.misplaced.annotation.check=true
+path.separator=:
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.country=US
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=unknown
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=/home/conejo/Develpoment/Projects/ERP/ERP_WS
+java.runtime.version=1.8.0_60-b27
+java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment
+java.endorsed.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/endorsed
+os.arch=amd64
+java.io.tmpdir=/tmp
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+os.name=Linux
+maven.ext.class.path=/home/conejo/netbeans-8.0.2/java/maven-nblib/netbeans-eventspy.jar
+classworlds.conf=/home/conejo/netbeans-8.0.2/java/maven/bin/m2.conf
+sun.jnu.encoding=UTF-8
+java.library.path=/usr/lib/jvm/java-8-oracle/jre/lib/amd64:/usr/lib/jvm/java-8-oracle/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+os.version=3.16.0-50-generic
+user.home=/home/conejo
+user.timezone=America/La_Paz
+java.awt.printerjob=sun.print.PSPrinterJob
+file.encoding=UTF-8
+java.specification.version=1.8
+java.class.path=/home/conejo/netbeans-8.0.2/java/maven/boot/plexus-classworlds-2.4.jar
+user.name=conejo
+java.vm.specification.version=1.8
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/home/conejo/netbeans-8.0.2/java/maven-nblib/netbeans-eventspy.jar clean install
+java.home=/usr/lib/jvm/java-8-oracle/jre
+sun.arch.data.model=64
+user.language=en
+java.specification.vendor=Oracle Corporation
+awt.toolkit=sun.awt.X11.XToolkit
+java.vm.info=mixed mode
+java.version=1.8.0_60
+securerandom.source=file:/dev/./urandom
+java.ext.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext
+sun.boot.class.path=/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes
+java.vendor=Oracle Corporation
+maven.home=/home/conejo/netbeans-8.0.2/java/maven
+file.separator=/
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+sun.cpu.isalist=
+---- Command Line ---
+-encoding
+UTF-8
+-source
+1.6
+-target
+1.6
+-classpath
+/home/conejo/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/conejo/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/home/conejo/.m2/repository/com/auth0/java-jwt/1.0.0/java-jwt-1.0.0.jar:/home/conejo/.m2/repository/com/bap/erp/commons/0.1/commons-0.1.jar:/home/conejo/.m2/repository/com/fasterxml/classmate/1.0.0/classmate-1.0.0.jar:/home/conejo/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.jar:/home/conejo/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.jar:/home/conejo/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.jar:/home/conejo/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.4.0/jackson-datatype-joda-2.4.0.jar:/home/conejo/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.4.0/jackson-datatype-jsr310-2.4.0.jar:/home/conejo/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.0.0/jackson-jaxrs-json-provider-2.0.0.jar:/home/conejo/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.0.0/jackson-module-jaxb-annotations-2.0.0.jar:/home/conejo/.m2/repository/com/fasterxml/jackson/module/jackson-module-jsonSchema/2.1.0/jackson-module-jsonSchema-2.1.0.jar:/home/conejo/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.10/2.1.5/jackson-module-scala_2.10-2.1.5.jar:/home/conejo/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/conejo/.m2/repository/com/google/guava/guava/11.0.2/guava-11.0.2.jar:/home/conejo/.m2/repository/com/google/zxing/core/3.0.0/core-3.0.0.jar:/home/conejo/.m2/repository/com/google/zxing/javase/3.0.0/javase-3.0.0.jar:/home/conejo/.m2/repository/com/itextpdf/itext-pdfa/5.5.0/itext-pdfa-5.5.0.jar:/home/conejo/.m2/repository/com/itextpdf/itextpdf/5.5.0/itextpdf-5.5.0.jar:/home/conejo/.m2/repository/com/microsoft/sqlserver/sqljdbc4/3.0/sqljdbc4-3.0.jar:/home/conejo/.m2/repository/com/sun/xml/security/xml-security-impl/1.0/xml-security-impl-1.0.jar:/home/conejo/.m2/repository/com/thoughtworks/paranamer/paranamer/2.5.2/paranamer-2.5.2.jar:/home/conejo/.m2/repository/com/wordnik/swagger-annotations/1.3.5/swagger-annotations-1.3.5.jar:/home/conejo/.m2/repository/com/wordnik/swagger-core_2.10/1.3.5/swagger-core_2.10-1.3.5.jar:/home/conejo/.m2/repository/com/wordnik/swagger-jaxrs_2.10/1.3.5/swagger-jaxrs_2.10-1.3.5.jar:/home/conejo/.m2/repository/com/wordnik/swagger-jersey2-jaxrs_2.10/1.3.5/swagger-jersey2-jaxrs_2.10-1.3.5.jar:/home/conejo/.m2/repository/commons-beanutils/commons-beanutils/1.9.0/commons-beanutils-1.9.0.jar:/home/conejo/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/conejo/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/home/conejo/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar:/home/conejo/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/conejo/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/home/conejo/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/conejo/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/home/conejo/.m2/repository/io/jsonwebtoken/jjwt/0.4/jjwt-0.4.jar:/home/conejo/.m2/repository/jakarta-regexp/jakarta-regexp/1.4/jakarta-regexp-1.4.jar:/home/conejo/.m2/repository/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar:/home/conejo/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/conejo/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/conejo/.m2/repository/javax/mail/mail/1.4.7/mail-1.4.7.jar:/home/conejo/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/home/conejo/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/conejo/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0/javax.ws.rs-api-2.0.jar:/home/conejo/.m2/repository/jfree/jcommon/1.0.15/jcommon-1.0.15.jar:/home/conejo/.m2/repository/jfree/jfreechart/1.0.12/jfreechart-1.0.12.jar:/home/conejo/.m2/repository/joda-time/joda-time/2.2/joda-time-2.2.jar:/home/conejo/.m2/repository/junit/junit/4.3.1/junit-4.3.1.jar:/home/conejo/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/conejo/.m2/repository/net/glxn/qrgen/1.4/qrgen-1.4.jar:/home/conejo/.m2/repository/net/sf/jasperreports/jasperreports/6.0.0/jasperreports-6.0.0.jar:/home/conejo/.m2/repository/org/apache/lucene/lucene-analyzers-common/4.5.1/lucene-analyzers-common-4.5.1.jar:/home/conejo/.m2/repository/org/apache/lucene/lucene-core/4.5.1/lucene-core-4.5.1.jar:/home/conejo/.m2/repository/org/apache/lucene/lucene-queries/4.5.1/lucene-queries-4.5.1.jar:/home/conejo/.m2/repository/org/apache/lucene/lucene-queryparser/4.5.1/lucene-queryparser-4.5.1.jar:/home/conejo/.m2/repository/org/apache/lucene/lucene-sandbox/4.5.1/lucene-sandbox-4.5.1.jar:/home/conejo/.m2/repository/org/apache/pdfbox/fontbox/1.8.10/fontbox-1.8.10.jar:/home/conejo/.m2/repository/org/apache/pdfbox/jempbox/1.8.10/jempbox-1.8.10.jar:/home/conejo/.m2/repository/org/apache/pdfbox/pdfbox/1.8.10/pdfbox-1.8.10.jar:/home/conejo/.m2/repository/org/apache/poi/poi/3.11/poi-3.11.jar:/home/conejo/.m2/repository/org/apache/poi/poi-ooxml/3.11/poi-ooxml-3.11.jar:/home/conejo/.m2/repository/org/apache/poi/poi-ooxml-schemas/3.11/poi-ooxml-schemas-3.11.jar:/home/conejo/.m2/repository/org/apache/velocity/velocity/1.6.2/velocity-1.6.2.jar:/home/conejo/.m2/repository/org/apache/xmlbeans/xmlbeans/2.6.0/xmlbeans-2.6.0.jar:/home/conejo/.m2/repository/org/aspectj/aspectjrt/1.6.7/aspectjrt-1.6.7.jar:/home/conejo/.m2/repository/org/aspectj/aspectjweaver/1.6.7/aspectjweaver-1.6.7.jar:/home/conejo/.m2/repository/org/codehaus/castor/castor/1.2/castor-1.2.jar:/home/conejo/.m2/repository/org/codehaus/groovy/groovy-all/2.0.1/groovy-all-2.0.1.jar:/home/conejo/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar:/home/conejo/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar:/home/conejo/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar:/home/conejo/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar:/home/conejo/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.3.1/ecj-4.3.1.jar:/home/conejo/.m2/repository/org/glassfish/hk2/class-model/2.2.0-b21/class-model-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/config-types/2.2.0-b21/config-types-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/core/2.2.0-b21/core-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/hk2/2.2.0-b21/hk2-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/hk2-api/2.2.0-b21/hk2-api-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/hk2-config/2.2.0-b21/hk2-config-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/hk2-locator/2.2.0-b21/hk2-locator-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/hk2-runlevel/2.2.0-b21/hk2-runlevel-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/hk2-utils/2.2.0-b21/hk2-utils-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar:/home/conejo/.m2/repository/org/glassfish/hk2/spring-bridge/2.2.0-b21/spring-bridge-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/external/asm-all-repackaged/2.2.0-b21/asm-all-repackaged-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/external/bean-validator/2.2.0-b21/bean-validator-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/external/cglib/2.2.0-b21/cglib-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/hk2/external/javax.inject/2.2.0-b21/javax.inject-2.2.0-b21.jar:/home/conejo/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet/2.5/jersey-container-servlet-2.5.jar:/home/conejo/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.5/jersey-container-servlet-core-2.5.jar:/home/conejo/.m2/repository/org/glassfish/jersey/core/jersey-client/2.5/jersey-client-2.5.jar:/home/conejo/.m2/repository/org/glassfish/jersey/core/jersey-common/2.5/jersey-common-2.5.jar:/home/conejo/.m2/repository/org/glassfish/jersey/core/jersey-server/2.5/jersey-server-2.5.jar:/home/conejo/.m2/repository/org/glassfish/jersey/ext/jersey-entity-filtering/2.5/jersey-entity-filtering-2.5.jar:/home/conejo/.m2/repository/org/glassfish/jersey/ext/jersey-spring3/2.5/jersey-spring3-2.5.jar:/home/conejo/.m2/repository/org/glassfish/jersey/media/jersey-media-json-jackson/2.5/jersey-media-json-jackson-2.5.jar:/home/conejo/.m2/repository/org/glassfish/jersey/media/jersey-media-multipart/2.5/jersey-media-multipart-2.5.jar:/home/conejo/.m2/repository/org/hibernate/hibernate-core/4.3.5.Final/hibernate-core-4.3.5.Final.jar:/home/conejo/.m2/repository/org/hibernate/hibernate-entitymanager/4.3.5.Final/hibernate-entitymanager-4.3.5.Final.jar:/home/conejo/.m2/repository/org/hibernate/hibernate-validator/5.1.1.Final/hibernate-validator-5.1.1.Final.jar:/home/conejo/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar:/home/conejo/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/home/conejo/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar:/home/conejo/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar:/home/conejo/.m2/repository/org/jboss/logging/jboss-logging/3.1.3.GA/jboss-logging-3.1.3.GA.jar:/home/conejo/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar:/home/conejo/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar:/home/conejo/.m2/repository/org/jdom/jdom2/2.0.6/jdom2-2.0.6.jar:/home/conejo/.m2/repository/org/joda/joda-convert/1.2/joda-convert-1.2.jar:/home/conejo/.m2/repository/org/json4s/json4s-ast_2.10/3.2.5/json4s-ast_2.10-3.2.5.jar:/home/conejo/.m2/repository/org/json4s/json4s-core_2.10/3.2.5/json4s-core_2.10-3.2.5.jar:/home/conejo/.m2/repository/org/json4s/json4s-ext_2.10/3.2.5/json4s-ext_2.10-3.2.5.jar:/home/conejo/.m2/repository/org/json4s/json4s-jackson_2.10/3.2.5/json4s-jackson_2.10-3.2.5.jar:/home/conejo/.m2/repository/org/json4s/json4s-native_2.10/3.2.5/json4s-native_2.10-3.2.5.jar:/home/conejo/.m2/repository/org/jvnet/tiger-types/1.4/tiger-types-1.4.jar:/home/conejo/.m2/repository/org/jvnet/mimepull/mimepull/1.9.3/mimepull-1.9.3.jar:/home/conejo/.m2/repository/org/olap4j/olap4j/0.9.7.309-JS-3/olap4j-0.9.7.309-JS-3.jar:/home/conejo/.m2/repository/org/osbosoftware/factura/1.0/factura-1.0.jar:/home/conejo/.m2/repository/org/reflections/reflections/0.9.9-RC1/reflections-0.9.9-RC1.jar:/home/conejo/.m2/repository/org/scala-lang/scala-compiler/2.10.0/scala-compiler-2.10.0.jar:/home/conejo/.m2/repository/org/scala-lang/scala-library/2.10.1/scala-library-2.10.1.jar:/home/conejo/.m2/repository/org/scala-lang/scala-reflect/2.10.0/scala-reflect-2.10.0.jar:/home/conejo/.m2/repository/org/scala-lang/scalap/2.10.0/scalap-2.10.0.jar:/home/conejo/.m2/repository/org/scannotation/scannotation/1.0.3/scannotation-1.0.3.jar:/home/conejo/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar:/home/conejo/.m2/repository/org/slf4j/slf4j-log4j12/1.7.12/slf4j-log4j12-1.7.12.jar:/home/conejo/.m2/repository/org/springframework/spring-aop/4.0.5.RELEASE/spring-aop-4.0.5.RELEASE.jar:/home/conejo/.m2/repository/org/springframework/spring-beans/4.0.5.RELEASE/spring-beans-4.0.5.RELEASE.jar:/home/conejo/.m2/repository/org/springframework/spring-context/4.0.5.RELEASE/spring-context-4.0.5.RELEASE.jar:/home/conejo/.m2/repository/org/springframework/spring-context-support/4.0.5.RELEASE/spring-context-support-4.0.5.RELEASE.jar:/home/conejo/.m2/repository/org/springframework/spring-core/4.0.5.RELEASE/spring-core-4.0.5.RELEASE.jar:/home/conejo/.m2/repository/org/springframework/spring-expression/4.0.5.RELEASE/spring-expression-4.0.5.RELEASE.jar:/home/conejo/.m2/repository/org/springframework/spring-jdbc/4.0.5.RELEASE/spring-jdbc-4.0.5.RELEASE.jar:/home/conejo/.m2/repository/org/springframework/spring-orm/4.0.5.RELEASE/spring-orm-4.0.5.RELEASE.jar:/home/conejo/.m2/repository/org/springframework/spring-tx/4.0.5.RELEASE/spring-tx-4.0.5.RELEASE.jar:/home/conejo/.m2/repository/org/springframework/spring-web/4.0.5.RELEASE/spring-web-4.0.5.RELEASE.jar:/home/conejo/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar:/home/conejo/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/home/conejo/.m2/repository/xml-apis/xml-apis/1.3.02/xml-apis-1.3.02.jar:/home/conejo/Develpoment/Projects/ERP/ERP_WS/target/classes
+-d
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/target/classes
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParActividadEconomica.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/data/SendEmailTest.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppEventoConceptoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcActividadEconomica.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhImportWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ParValorWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppGrupoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CuentaBancariaPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoRegistro.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/exceptions/ReportCreationException.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppConceptoProveedoresPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppEventoConceptoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhBonoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppFacturaWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcItemWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppProveedorClienteBusquedaPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppRetencionWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppEventoConceptoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ErpDetalleFacturaServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParRecurrencia.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CntCuentaPlanCuentasPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParLocalizacion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpProveedorClientePojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/rh/RhDescuentoPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParEstado.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppProveedorClientePojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhDescuentoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumPeriodo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoRegistro.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcTipoCambio.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcActividadEconomicaService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ErpDetalleFactura.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/clients/ErpContabilidadClient.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppFormaPagoCobroWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhSeccionServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CntCalculosTributariosWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cnt/CntComprobanteServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcPagoContratoPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumCaracteristicaEspecial.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoDocumentoPago.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoPago.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CodigoControlPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpAplicantePojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhCargo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhPeriodoGestionServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/EntidadPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/filters/TokenFilter.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcPagoPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/rh/RhEmpleadoDescuentoPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhLiquidacion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoItem.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppRetencionServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoHito.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ErpNotaCreditoDebitoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoGrupo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/managers/GeneradorQR.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ImportWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppFormaPagoCobroService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhSeccionWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoContratoEmpleado.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcContratoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcFacturaEmitidaPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ErpFactura.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/dao/GenericJpaDao.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhVariacionService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhBonoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParMunicipio.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhDescuentoEmpleadoCargoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CuentaBancariaWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhParametros.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ErpDepartamentoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhRcIva.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoAplicacionRetencion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcContratoItem.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcPagoContratoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhBonoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/server/client/GeneraXML.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParBanco.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/DocumentoPagoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppFacturaService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhEmpleadoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcContratoPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhEmpleadoCargo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ban/CuentaBancariaService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/Entidad.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParEstadoCivil.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumMes.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcSucursal.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcDosificacion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoCompra.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcTipoCambioWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoDescuento.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoDocumentoMercantil.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoMoneda.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ConcatenaActividadEconomicaPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppConceptoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumMunicipio.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpDetFacturaNotaCredito.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/par/ParValorService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoRetencion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoVariacion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumEstadoProceso.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CodigoControlExcelPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParDepartamento.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcDosificacionWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcDosificacionServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ErpDepartamentoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoDocumentoPago.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumModalidadTransaccion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoDocumentoMercantil.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcContratoItemWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcPagoContratoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppNotaCreditoDebitoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppProveedorClienteConcepto.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumLocalizacion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpFacturaRetencionPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ERP.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhEmpleadoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppProveedorClienteConceptoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppFactura.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/correo/EmailManagerServiceCliente.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppProveedorClienteConceptoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/rh/RhGeneraGridPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParValor.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ban/CuentaBancariaServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppFormaPagoCobro.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ban/DocumentoPagoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoContacto.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParGenero.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/managers/ReportManager.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcSucursalServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumFormaDePago.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppEventoConcepto.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhEmpleado.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcLibroDeVentasPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcContratoActividadEconomica.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppConceptoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParSeccion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppFacturaServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ErpAplicante.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoRetencion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/rh/RhEmpleadoDescuentoPojo1.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcLibroDeBancarizacionPorVentasPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/aspects/AuthenticationAspect.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhDescuentoEmpleadoCargoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppProveedorClienteConceptoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhVariacionWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhPeriodoGestionWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/server/client/RepositoryClient.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhDescuentoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ban/DocumentoPago.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhEmpleadoCargoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhCargoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcContratoItemServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoProveedorCliente.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParCliente.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcItem.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ErpDetalleFacturaService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CntComprobanteWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoModulo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcBancoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhPeriodoGestionService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppConcepto.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParModalidadFacturacion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoTransaccion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppGrupoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ErpFacturaService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ErpDepartamentoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParEstadoProceso.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhVariacionServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoBonoAntiguedad.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoProveedorCliente.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoAFP.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumModalidadFacturacion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhDescuentoEmpleadoCargoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcItemService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppLibroDeComprasPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CntTipoCambioWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumColorView.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumModulo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/DocumentoPagoFacturasPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppContactoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParModalidadTransaccion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcDetalleFacturaSerializer.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcContratoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cnt/CntComprobanteService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/par/ParValorServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcContrato.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcPagoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/data/ErpData.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppProveedorClienteWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ban/CuentaBancaria.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcBancoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcBanco.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppContactoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcLibroDeVentasHuaweiPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcContratoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ProveedorGrupoConcepto.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ErpFacturaServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhDescuentoEmpleadoCargo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/managers/JasperReportsBrowserDemoServlet.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumBanco.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhParametrosServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhEmpleadoCargoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhDescuentoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhEmpleadoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoDocumento.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/correo/EmailManagerService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/server/client/PruebaXML.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/rh/RhCargoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/data/User.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppProveedorClienteServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumEstadoPago.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppFormaPagoCobroCuentasBancariasPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParCaracteristicaEspecial.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcPagoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ErpDepartamento.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoEntidad.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/aspects/UserSessionAspect.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhParametrosService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoAlicuota.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcTipoCambioService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppGrupoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParEstadoPago.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppGrupo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoDocumento.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppRetencionService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParMes.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpNotaCreditoDebitoCpcDetalleFacturaPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcConciliacionContablePojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumActividadEconomica.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumRecurrencia.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumEstado.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoPago.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumPropietarioCuenta.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcBancoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ErpFacturaWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpFacturasDatosPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcActividadEconomicaServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ErpNotaCreditoDebitoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcLibroDeComprasPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParPeriodo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoAplicante.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppFormaPagoCobroServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhDescuento.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CpcFacturaEmitidaCpcDetalleFacturaPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhSeccion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppRetencion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhVariacion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ErpNotaCreditoDebitoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhEmpleadoCargoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcContratoActividadEconomicaServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CntTipoCambioPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcActividadEconomicaWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhBono.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoTransaccion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumEstadoFactura.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumDepartamento.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcContratoItemService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhParametrosWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/ErpNotaCreditoDebito.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcItemServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/ErpAplicanteService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhPeriodoGestion.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParEstadoFactura.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/rh/RhBonoEmpleadoCargo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppConceptoService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppFacturaCntComprobantePojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpp/CppNotaCreditoDebitoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ErpAplicanteWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/rh/RhCargoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/enums/EnumTipoContacto.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/correo/EmailManagerServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/CppProveedorClienteConceptoPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoHito.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppContacto.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpp/CppProveedorClienteService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcDosificacionService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoEmpleado.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/clients/CPanelClient.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ErpAplicanteServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/ErpFacturasBancariasPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcTipoCambioServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ErpDetalleFacturaWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcSucursalService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoMoneda.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpp/CppProveedorCliente.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcPago.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/ban/DocumentoPagoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParFormaDePago.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/rh/RhSeccionService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/impl/cpc/CpcPagoServiceImpl.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/servicios/cpc/CpcContratoActividadEconomicaService.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CppContactoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcPagoContratoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParTipoAplicacionDescuentoBono.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/par/ParCondicionPension.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/ReportesPDF.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/pojo/EntidadArbolPojo.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/CpcSucursalWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/ws/EnvioCorreoWS.java
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcPagoContrato.java
+---- Full Classpath ---
+/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar(3501583 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar(65988272 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar(missing)
+/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar(625764 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar(114730 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar(3133473 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar(555268 bytes)
+/usr/lib/jvm/java-8-oracle/jre/classes(missing)
+/usr/lib/jvm/java-8-oracle/jre/lib/ext/jaccess.jar(44516 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunpkcs11.jar(250826 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/ext/cldrdata.jar(3860522 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/ext/nashorn.jar(2014239 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/ext/jfxrt.jar(18464934 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunec.jar(39771 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/ext/localedata.jar(1178935 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/ext/sunjce_provider.jar(278680 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/ext/zipfs.jar(68848 bytes)
+/usr/lib/jvm/java-8-oracle/jre/lib/ext/dnsns.jar(8286 bytes)
+/home/conejo/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar(445288 bytes)
+/home/conejo/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar(4467 bytes)
+/home/conejo/.m2/repository/com/auth0/java-jwt/1.0.0/java-jwt-1.0.0.jar(1225121 bytes)
+/home/conejo/.m2/repository/com/bap/erp/commons/0.1/commons-0.1.jar(28080 bytes)
+/home/conejo/.m2/repository/com/fasterxml/classmate/1.0.0/classmate-1.0.0.jar(60282 bytes)
+/home/conejo/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.2.2/jackson-annotations-2.2.2.jar(33491 bytes)
+/home/conejo/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2.jar(191738 bytes)
+/home/conejo/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.2.2/jackson-databind-2.2.2.jar(866104 bytes)
+/home/conejo/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.4.0/jackson-datatype-joda-2.4.0.jar(52237 bytes)
+/home/conejo/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.4.0/jackson-datatype-jsr310-2.4.0.jar(41875 bytes)
+/home/conejo/.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.0.0/jackson-jaxrs-json-provider-2.0.0.jar(26504 bytes)
+/home/conejo/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.0.0/jackson-module-jaxb-annotations-2.0.0.jar(32213 bytes)
+/home/conejo/.m2/repository/com/fasterxml/jackson/module/jackson-module-jsonSchema/2.1.0/jackson-module-jsonSchema-2.1.0.jar(50034 bytes)
+/home/conejo/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.10/2.1.5/jackson-module-scala_2.10-2.1.5.jar(1067516 bytes)
+/home/conejo/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar(33015 bytes)
+/home/conejo/.m2/repository/com/google/guava/guava/11.0.2/guava-11.0.2.jar(1648200 bytes)
+/home/conejo/.m2/repository/com/google/zxing/core/3.0.0/core-3.0.0.jar(538199 bytes)
+/home/conejo/.m2/repository/com/google/zxing/javase/3.0.0/javase-3.0.0.jar(38898 bytes)
+/home/conejo/.m2/repository/com/itextpdf/itext-pdfa/5.5.0/itext-pdfa-5.5.0.jar(54332 bytes)
+/home/conejo/.m2/repository/com/itextpdf/itextpdf/5.5.0/itextpdf-5.5.0.jar(2114682 bytes)
+/home/conejo/.m2/repository/com/microsoft/sqlserver/sqljdbc4/3.0/sqljdbc4-3.0.jar(537303 bytes)
+/home/conejo/.m2/repository/com/sun/xml/security/xml-security-impl/1.0/xml-security-impl-1.0.jar(424782 bytes)
+/home/conejo/.m2/repository/com/thoughtworks/paranamer/paranamer/2.5.2/paranamer-2.5.2.jar(30190 bytes)
+/home/conejo/.m2/repository/com/wordnik/swagger-annotations/1.3.5/swagger-annotations-1.3.5.jar(8032 bytes)
+/home/conejo/.m2/repository/com/wordnik/swagger-core_2.10/1.3.5/swagger-core_2.10-1.3.5.jar(672505 bytes)
+/home/conejo/.m2/repository/com/wordnik/swagger-jaxrs_2.10/1.3.5/swagger-jaxrs_2.10-1.3.5.jar(147155 bytes)
+/home/conejo/.m2/repository/com/wordnik/swagger-jersey2-jaxrs_2.10/1.3.5/swagger-jersey2-jaxrs_2.10-1.3.5.jar(62678 bytes)
+/home/conejo/.m2/repository/commons-beanutils/commons-beanutils/1.9.0/commons-beanutils-1.9.0.jar(230951 bytes)
+/home/conejo/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar(263965 bytes)
+/home/conejo/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar(575389 bytes)
+/home/conejo/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar(196768 bytes)
+/home/conejo/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar(185140 bytes)
+/home/conejo/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar(261809 bytes)
+/home/conejo/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar(62050 bytes)
+/home/conejo/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar(313898 bytes)
+/home/conejo/.m2/repository/io/jsonwebtoken/jjwt/0.4/jjwt-0.4.jar(81937 bytes)
+/home/conejo/.m2/repository/jakarta-regexp/jakarta-regexp/1.4/jakarta-regexp-1.4.jar(28576 bytes)
+/home/conejo/.m2/repository/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar(644148 bytes)
+/home/conejo/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar(62983 bytes)
+/home/conejo/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar(26366 bytes)
+/home/conejo/.m2/repository/javax/mail/mail/1.4.7/mail-1.4.7.jar(521157 bytes)
+/home/conejo/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar(105112 bytes)
+/home/conejo/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar(63777 bytes)
+/home/conejo/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0/javax.ws.rs-api-2.0.jar(112758 bytes)
+/home/conejo/.m2/repository/jfree/jcommon/1.0.15/jcommon-1.0.15.jar(309294 bytes)
+/home/conejo/.m2/repository/jfree/jfreechart/1.0.12/jfreechart-1.0.12.jar(1368681 bytes)
+/home/conejo/.m2/repository/joda-time/joda-time/2.2/joda-time-2.2.jar(573912 bytes)
+/home/conejo/.m2/repository/junit/junit/4.3.1/junit-4.3.1.jar(106547 bytes)
+/home/conejo/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar(489884 bytes)
+/home/conejo/.m2/repository/net/glxn/qrgen/1.4/qrgen-1.4.jar(7194 bytes)
+/home/conejo/.m2/repository/net/sf/jasperreports/jasperreports/6.0.0/jasperreports-6.0.0.jar(5114391 bytes)
+/home/conejo/.m2/repository/org/apache/lucene/lucene-analyzers-common/4.5.1/lucene-analyzers-common-4.5.1.jar(1586103 bytes)
+/home/conejo/.m2/repository/org/apache/lucene/lucene-core/4.5.1/lucene-core-4.5.1.jar(2297477 bytes)
+/home/conejo/.m2/repository/org/apache/lucene/lucene-queries/4.5.1/lucene-queries-4.5.1.jar(205195 bytes)
+/home/conejo/.m2/repository/org/apache/lucene/lucene-queryparser/4.5.1/lucene-queryparser-4.5.1.jar(384884 bytes)
+/home/conejo/.m2/repository/org/apache/lucene/lucene-sandbox/4.5.1/lucene-sandbox-4.5.1.jar(45578 bytes)
+/home/conejo/.m2/repository/org/apache/pdfbox/fontbox/1.8.10/fontbox-1.8.10.jar(219006 bytes)
+/home/conejo/.m2/repository/org/apache/pdfbox/jempbox/1.8.10/jempbox-1.8.10.jar(51065 bytes)
+/home/conejo/.m2/repository/org/apache/pdfbox/pdfbox/1.8.10/pdfbox-1.8.10.jar(4085577 bytes)
+/home/conejo/.m2/repository/org/apache/poi/poi/3.11/poi-3.11.jar(2080419 bytes)
+/home/conejo/.m2/repository/org/apache/poi/poi-ooxml/3.11/poi-ooxml-3.11.jar(1210980 bytes)
+/home/conejo/.m2/repository/org/apache/poi/poi-ooxml-schemas/3.11/poi-ooxml-schemas-3.11.jar(5595829 bytes)
+/home/conejo/.m2/repository/org/apache/velocity/velocity/1.6.2/velocity-1.6.2.jar(420975 bytes)
+/home/conejo/.m2/repository/org/apache/xmlbeans/xmlbeans/2.6.0/xmlbeans-2.6.0.jar(2730866 bytes)
+/home/conejo/.m2/repository/org/aspectj/aspectjrt/1.6.7/aspectjrt-1.6.7.jar(116039 bytes)
+/home/conejo/.m2/repository/org/aspectj/aspectjweaver/1.6.7/aspectjweaver-1.6.7.jar(1741639 bytes)
+/home/conejo/.m2/repository/org/codehaus/castor/castor/1.2/castor-1.2.jar(864598 bytes)
+/home/conejo/.m2/repository/org/codehaus/groovy/groovy-all/2.0.1/groovy-all-2.0.1.jar(6191960 bytes)
+/home/conejo/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar(232248 bytes)
+/home/conejo/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.13/jackson-jaxrs-1.9.13.jar(18336 bytes)
+/home/conejo/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar(780664 bytes)
+/home/conejo/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.13/jackson-xc-1.9.13.jar(27084 bytes)
+/home/conejo/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.3.1/ecj-4.3.1.jar(1830791 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/class-model/2.2.0-b21/class-model-2.2.0-b21.jar(88033 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/config-types/2.2.0-b21/config-types-2.2.0-b21.jar(6833 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/core/2.2.0-b21/core-2.2.0-b21.jar(117537 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/hk2/2.2.0-b21/hk2-2.2.0-b21.jar(3319 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/hk2-api/2.2.0-b21/hk2-api-2.2.0-b21.jar(130236 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/hk2-config/2.2.0-b21/hk2-config-2.2.0-b21.jar(204120 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/hk2-locator/2.2.0-b21/hk2-locator-2.2.0-b21.jar(147772 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/hk2-runlevel/2.2.0-b21/hk2-runlevel-2.2.0-b21.jar(50262 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/hk2-utils/2.2.0-b21/hk2-utils-2.2.0-b21.jar(66742 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar(20235 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/spring-bridge/2.2.0-b21/spring-bridge-2.2.0-b21.jar(13620 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/external/asm-all-repackaged/2.2.0-b21/asm-all-repackaged-2.2.0-b21.jar(320122 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/external/bean-validator/2.2.0-b21/bean-validator-2.2.0-b21.jar(752887 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/external/cglib/2.2.0-b21/cglib-2.2.0-b21.jar(282811 bytes)
+/home/conejo/.m2/repository/org/glassfish/hk2/external/javax.inject/2.2.0-b21/javax.inject-2.2.0-b21.jar(5982 bytes)
+/home/conejo/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet/2.5/jersey-container-servlet-2.5.jar(15681 bytes)
+/home/conejo/.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.5/jersey-container-servlet-core-2.5.jar(53801 bytes)
+/home/conejo/.m2/repository/org/glassfish/jersey/core/jersey-client/2.5/jersey-client-2.5.jar(159736 bytes)
+/home/conejo/.m2/repository/org/glassfish/jersey/core/jersey-common/2.5/jersey-common-2.5.jar(700382 bytes)
+/home/conejo/.m2/repository/org/glassfish/jersey/core/jersey-server/2.5/jersey-server-2.5.jar(824376 bytes)
+/home/conejo/.m2/repository/org/glassfish/jersey/ext/jersey-entity-filtering/2.5/jersey-entity-filtering-2.5.jar(63473 bytes)
+/home/conejo/.m2/repository/org/glassfish/jersey/ext/jersey-spring3/2.5/jersey-spring3-2.5.jar(21040 bytes)
+/home/conejo/.m2/repository/org/glassfish/jersey/media/jersey-media-json-jackson/2.5/jersey-media-json-jackson-2.5.jar(4927 bytes)
+/home/conejo/.m2/repository/org/glassfish/jersey/media/jersey-media-multipart/2.5/jersey-media-multipart-2.5.jar(63856 bytes)
+/home/conejo/.m2/repository/org/hibernate/hibernate-core/4.3.5.Final/hibernate-core-4.3.5.Final.jar(5230007 bytes)
+/home/conejo/.m2/repository/org/hibernate/hibernate-entitymanager/4.3.5.Final/hibernate-entitymanager-4.3.5.Final.jar(645914 bytes)
+/home/conejo/.m2/repository/org/hibernate/hibernate-validator/5.1.1.Final/hibernate-validator-5.1.1.Final.jar(623269 bytes)
+/home/conejo/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.4.Final/hibernate-commons-annotations-4.0.4.Final.jar(75311 bytes)
+/home/conejo/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar(113371 bytes)
+/home/conejo/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar(714194 bytes)
+/home/conejo/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar(76551 bytes)
+/home/conejo/.m2/repository/org/jboss/logging/jboss-logging/3.1.3.GA/jboss-logging-3.1.3.GA.jar(57183 bytes)
+/home/conejo/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar(11558 bytes)
+/home/conejo/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar(27717 bytes)
+/home/conejo/.m2/repository/org/jdom/jdom2/2.0.6/jdom2-2.0.6.jar(304924 bytes)
+/home/conejo/.m2/repository/org/joda/joda-convert/1.2/joda-convert-1.2.jar(38460 bytes)
+/home/conejo/.m2/repository/org/json4s/json4s-ast_2.10/3.2.5/json4s-ast_2.10-3.2.5.jar(86179 bytes)
+/home/conejo/.m2/repository/org/json4s/json4s-core_2.10/3.2.5/json4s-core_2.10-3.2.5.jar(579417 bytes)
+/home/conejo/.m2/repository/org/json4s/json4s-ext_2.10/3.2.5/json4s-ext_2.10-3.2.5.jar(74561 bytes)
+/home/conejo/.m2/repository/org/json4s/json4s-jackson_2.10/3.2.5/json4s-jackson_2.10-3.2.5.jar(39953 bytes)
+/home/conejo/.m2/repository/org/json4s/json4s-native_2.10/3.2.5/json4s-native_2.10-3.2.5.jar(68735 bytes)
+/home/conejo/.m2/repository/org/jvnet/tiger-types/1.4/tiger-types-1.4.jar(17506 bytes)
+/home/conejo/.m2/repository/org/jvnet/mimepull/mimepull/1.9.3/mimepull-1.9.3.jar(62135 bytes)
+/home/conejo/.m2/repository/org/olap4j/olap4j/0.9.7.309-JS-3/olap4j-0.9.7.309-JS-3.jar(445343 bytes)
+/home/conejo/.m2/repository/org/osbosoftware/factura/1.0/factura-1.0.jar(16992 bytes)
+/home/conejo/.m2/repository/org/reflections/reflections/0.9.9-RC1/reflections-0.9.9-RC1.jar(121013 bytes)
+/home/conejo/.m2/repository/org/scala-lang/scala-compiler/2.10.0/scala-compiler-2.10.0.jar(14149435 bytes)
+/home/conejo/.m2/repository/org/scala-lang/scala-library/2.10.1/scala-library-2.10.1.jar(7137903 bytes)
+/home/conejo/.m2/repository/org/scala-lang/scala-reflect/2.10.0/scala-reflect-2.10.0.jar(3149351 bytes)
+/home/conejo/.m2/repository/org/scala-lang/scalap/2.10.0/scalap-2.10.0.jar(855012 bytes)
+/home/conejo/.m2/repository/org/scannotation/scannotation/1.0.3/scannotation-1.0.3.jar(18767 bytes)
+/home/conejo/.m2/repository/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar(32127 bytes)
+/home/conejo/.m2/repository/org/slf4j/slf4j-log4j12/1.7.12/slf4j-log4j12-1.7.12.jar(8860 bytes)
+/home/conejo/.m2/repository/org/springframework/spring-aop/4.0.5.RELEASE/spring-aop-4.0.5.RELEASE.jar(352744 bytes)
+/home/conejo/.m2/repository/org/springframework/spring-beans/4.0.5.RELEASE/spring-beans-4.0.5.RELEASE.jar(670023 bytes)
+/home/conejo/.m2/repository/org/springframework/spring-context/4.0.5.RELEASE/spring-context-4.0.5.RELEASE.jar(977232 bytes)
+/home/conejo/.m2/repository/org/springframework/spring-context-support/4.0.5.RELEASE/spring-context-support-4.0.5.RELEASE.jar(135413 bytes)
+/home/conejo/.m2/repository/org/springframework/spring-core/4.0.5.RELEASE/spring-core-4.0.5.RELEASE.jar(976350 bytes)
+/home/conejo/.m2/repository/org/springframework/spring-expression/4.0.5.RELEASE/spring-expression-4.0.5.RELEASE.jar(205142 bytes)
+/home/conejo/.m2/repository/org/springframework/spring-jdbc/4.0.5.RELEASE/spring-jdbc-4.0.5.RELEASE.jar(424610 bytes)
+/home/conejo/.m2/repository/org/springframework/spring-orm/4.0.5.RELEASE/spring-orm-4.0.5.RELEASE.jar(366905 bytes)
+/home/conejo/.m2/repository/org/springframework/spring-tx/4.0.5.RELEASE/spring-tx-4.0.5.RELEASE.jar(248205 bytes)
+/home/conejo/.m2/repository/org/springframework/spring-web/4.0.5.RELEASE/spring-web-4.0.5.RELEASE.jar(672765 bytes)
+/home/conejo/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar(65261 bytes)
+/home/conejo/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar(26514 bytes)
+/home/conejo/.m2/repository/xml-apis/xml-apis/1.3.02/xml-apis-1.3.02.jar(194205 bytes)
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/target/classes(26 entries)
+---- Compiler Messages ---
+info directory classpath entry does not exist: /usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar
+info zipfile classpath entry does not exist: /usr/lib/jvm/java-8-oracle/jre/classes
+info Pipelining compilation
+error at (no source information available)
+/home/conejo/Develpoment/Projects/ERP/ERP_WS/src/main/java/com/bap/erp/modelo/cpc/CpcPagoContrato.java:0::0 Internal compiler error
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:412)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:373)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:411)
+	at org.aspectj.weaver.World.resolve(World.java:296)
+	at org.aspectj.weaver.World.resolve(World.java:209)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:95)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:806)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:254)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:622)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:75)
+	at org.aspectj.weaver.ResolvedType.collectInterTypeMungers(ResolvedType.java:1388)
+	at org.aspectj.weaver.ResolvedType.getInterTypeMungersIncludingSupers(ResolvedType.java:1369)
+	at org.aspectj.weaver.ResolvedType.checkInterTypeMungers(ResolvedType.java:1440)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:704)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:569)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:405)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:200)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1022)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:355)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:234)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:381)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+abort ABORT -- (ClassFormatException) File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+org.aspectj.apache.bcel.classfile.ClassFormatException: File: 'java/lang/CharSequence.class': Invalid byte tag in constant pool: 18
+	at org.aspectj.apache.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:192)
+	at org.aspectj.apache.bcel.classfile.ClassParser.parse(ClassParser.java:131)
+	at org.aspectj.weaver.bcel.BcelWorld.lookupJavaClass(BcelWorld.java:412)
+	at org.aspectj.weaver.bcel.BcelWorld.resolveDelegate(BcelWorld.java:373)
+	at org.aspectj.weaver.World.resolveToReferenceType(World.java:411)
+	at org.aspectj.weaver.World.resolve(World.java:296)
+	at org.aspectj.weaver.World.resolve(World.java:209)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:95)
+	at org.aspectj.weaver.bcel.BcelGenericSignatureToTypeXConverter.classTypeSignature2TypeX(BcelGenericSignatureToTypeXConverter.java:41)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureGenericSignatureUnpacked(BcelObjectType.java:806)
+	at org.aspectj.weaver.bcel.BcelObjectType.getDeclaredInterfaces(BcelObjectType.java:254)
+	at org.aspectj.weaver.ReferenceType.getDeclaredInterfaces(ReferenceType.java:622)
+	at org.aspectj.weaver.ResolvedType.getDirectSupertypes(ResolvedType.java:75)
+	at org.aspectj.weaver.ResolvedType.collectInterTypeMungers(ResolvedType.java:1388)
+	at org.aspectj.weaver.ResolvedType.getInterTypeMungersIncludingSupers(ResolvedType.java:1369)
+	at org.aspectj.weaver.ResolvedType.checkInterTypeMungers(ResolvedType.java:1440)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:704)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.weaveInterTypeDeclarations(AjLookupEnvironment.java:569)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.doPendingWeaves(AjLookupEnvironment.java:405)
+	at org.aspectj.ajdt.internal.compiler.lookup.AjLookupEnvironment.completeTypeBindings(AjLookupEnvironment.java:200)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.internalBeginToCompile(Compiler.java:616)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.beginToCompile(Compiler.java:357)
+	at org.aspectj.org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:371)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performCompilation(AjBuildManager.java:1022)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:268)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:181)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:355)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:234)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:381)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+
+---- org.aspectj.weaver.bcel.BcelWorld@782e0844 ----
+Shadow mungers:
+Empty
+Type mungers:
+Empty
+Late Type mungers:
+Empty
